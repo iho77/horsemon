@@ -30,13 +30,11 @@
 
    /* Configure the number of ADC samples to average on each measurement.
       For convenience, make it a power of 2. */
-   .set adc_oversampling_factor_log, 2
+   .set adc_oversampling_factor_log, 3
    .set adc_oversampling_factor, (1 << adc_oversampling_factor_log)
 
-   .set max_sample_seconds, 60
-   .set sample_frequency, 10
-   .set max_samples, max_sample_seconds * sample_frequency
-   .set max_samples_bytes, max_samples * 2
+   .set max_samples, 512
+   .set max_samples_bytes, max_samples * 4
 
    /* Define variables, which go into .bss section (zero-initialized data) */
    .bss

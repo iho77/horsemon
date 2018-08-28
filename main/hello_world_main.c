@@ -29,13 +29,13 @@
 
 #define DEFAULT_VREF    1100        //Use adc2_vref_to_gpio() to obtain a better estimate
 #define NO_OF_SAMPLES   64   //Multi sampling
-#define DATA_BUF_SIZE 2048 //size of buffer for acc readings
+#define DATA_BUF_SIZE 512 //size of buffer for acc readings
 #define FEATURES_NUM 2
 
 extern const uint8_t ulp_main_bin_start[] asm("_binary_ulp_main_bin_start");
 extern const uint8_t ulp_main_bin_end[]   asm("_binary_ulp_main_bin_end");
 
-uint32_t data_acc[3][DATA_BUF_SIZE];
+
 float data[7][DATA_BUF_SIZE];
 float features[FEATURES_NUM];
 
@@ -149,42 +149,6 @@ void lorasend(){
 
 }
 
-void readacc(){
-	    uint32_t adc_x = 0;
-		uint32_t adc_y = 0;
-		uint32_t adc_z = 0;
-
-		float g_x = 0;
-	    float g_y = 0;
-		float g_z = 0;
-	    adc1_config_width(ADC_WIDTH_BIT_12);
-	    adc1_config_channel_atten(ADC1_CHANNEL_0, ADC_ATTEN_DB_11);
-	    adc1_config_channel_atten(ADC1_CHANNEL_1, ADC_ATTEN_DB_11);
-	    adc1_config_channel_atten(ADC1_CHANNEL_2, ADC_ATTEN_DB_11);
-	    esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN_DB_11, ADC_WIDTH_BIT_12, DEFAULT_VREF, (esp_adc_cal_characteristics_t *)&adc_chars);
-
-	    while (1) {
-
-
-	        for (int i = 0; i < NO_OF_SAMPLES; i++) {
-	            adc_x += adc1_get_raw(ADC1_CHANNEL_0);
-	            adc_y += adc1_get_raw(ADC1_CHANNEL_1);
-	            adc_z += adc1_get_raw(ADC1_CHANNEL_2);
-	        }
-
-	        adc_x /= NO_OF_SAMPLES;
-	        adc_y /= NO_OF_SAMPLES;
-	        adc_z /= NO_OF_SAMPLES;
-
-	        g_x = (int)(esp_adc_cal_raw_to_voltage(adc_x, &adc_chars)-1500)/300.0;
-	        g_y = (int)(esp_adc_cal_raw_to_voltage(adc_y, &adc_chars)-1500)/300.0;
-	        g_z = (int)(esp_adc_cal_raw_to_voltage(adc_z, &adc_chars)-1500)/300.0;
-
-	        printf("%.3f;%.3f;%.3f\n",g_x,g_y,g_z);
-
-	        vTaskDelay(pdMS_TO_TICKS(100));
-	    }
-}
 
 static void init_ulp_program()
 {

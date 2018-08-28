@@ -18,23 +18,23 @@ Linker script and memory map
  *(.data)
  .data          0x00000000000000c4        0x0 adc.ulp.o
 
-.bss            0x00000000000000c4      0xe20 load address 0x00000000000000d0
+.bss            0x00000000000000c4     0x1810 load address 0x00000000000000d0
                 0x00000000000000c4                . = ALIGN (0x4)
  *(.bss)
- .bss           0x00000000000000c4      0xe20 adc.ulp.o
+ .bss           0x00000000000000c4     0x1810 adc.ulp.o
                 0x00000000000000c4                sample_counter
                 0x00000000000000c8                tmp_ch_0
                 0x00000000000000cc                tmp_ch_1
                 0x00000000000000d0                tmp_ch_2
                 0x00000000000000d4                channel_0_measurements
-                0x0000000000000584                channel_1_measurements
-                0x0000000000000a34                channel_2_measurements
+                0x00000000000008d4                channel_1_measurements
+                0x00000000000010d4                channel_2_measurements
 
-.header         0x0000000000000ee4        0xc load address 0x0000000000000000
-                0x0000000000000ee4        0x4 LONG 0x706c75
-                0x0000000000000ee8        0x2 SHORT 0xc LOADADDR (.text)
-                0x0000000000000eea        0x2 SHORT 0xc4 SIZEOF (.text)
-                0x0000000000000eec        0x2 SHORT 0x0 SIZEOF (.data)
-                0x0000000000000eee        0x2 SHORT 0xe20 SIZEOF (.bss)
+.header         0x00000000000018d4        0xc load address 0x0000000000000000
+                0x00000000000018d4        0x4 LONG 0x706c75
+                0x00000000000018d8        0x2 SHORT 0xc LOADADDR (.text)
+                0x00000000000018da        0x2 SHORT 0xc4 SIZEOF (.text)
+                0x00000000000018dc        0x2 SHORT 0x0 SIZEOF (.data)
+                0x00000000000018de        0x2 SHORT 0x1810 SIZEOF (.bss)
 LOAD adc.ulp.o
 OUTPUT(ulp_main.elf elf32-esp32ulp)

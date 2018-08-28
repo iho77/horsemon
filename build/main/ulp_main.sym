@@ -1,6 +1,6 @@
 channel_0_measurements B 000000d4 
-channel_1_measurements B 00000584 
-channel_2_measurements B 00000a34 
+channel_1_measurements B 000008d4 
+channel_2_measurements B 000010d4 
 entry T 00000000 
 sample_counter B 000000c4 
 tmp_ch_0 B 000000c8 
