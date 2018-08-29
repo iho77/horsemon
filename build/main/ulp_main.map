@@ -2,7 +2,7 @@
 Memory Configuration
 
 Name             Origin             Length             Attributes
-ram              0x0000000000000000 0x0000000000002000 rw
+ram              0x0000000000000000 0x0000000000001f40 rw
 *default*        0x0000000000000000 0xffffffffffffffff
 
 Linker script and memory map

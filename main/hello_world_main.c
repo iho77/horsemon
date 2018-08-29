@@ -97,41 +97,38 @@ static void start_ulp_program();
 void app_main()
 {
 
-/*
-  lora_init();
-  lora_set_frequency(433e6);
-  lora_enable_crc();
-
-  for(int i=0;i<3;i++){
-	  for(int j=0;j<DATA_BUF_SIZE;j++){
-		  data_acc[i][j] = rand() % 100;
-	  }
-
-  }
-
-  while(1){
-	  proceed_buffer();
-	  lorasend();
-	  vTaskDelay(pdMS_TO_TICKS(5000));
-  }  */
-
 	esp_sleep_wakeup_cause_t cause = esp_sleep_get_wakeup_cause();
+
+	lora_init();
+	lora_set_frequency(433e6);
+	lora_enable_crc();
+
+	/*while(1){
+		lorasend();
+		vTaskDelay(2000/portTICK_PERIOD_MS);
+	}*/
+
     if (cause != ESP_SLEEP_WAKEUP_ULP) {
 	  //      printf("Not ULP wakeup\n");
-	        init_ulp_program();
+
+            init_ulp_program();
 	    } else {
-	  //      printf("Deep sleep wakeup\n");
+	  //    printf("Deep sleep wakeup\n");
 	        proceed_buffer();
 	        for(int i=0;i<FEATURES_NUM;i++){
 	        			features[i] = features_calc[i]();
 	        		}
+	        lorasend();
 
 	    }
 	    //printf("Entering deep sleep\n\n");
 	    start_ulp_program();
 	    ESP_ERROR_CHECK( esp_sleep_enable_ulp_wakeup() );
+	    //seems it does not have any sense on Heltec esp32-LoRa module
+	    rtc_gpio_isolate(GPIO_NUM_4);
+	    rtc_gpio_isolate(GPIO_NUM_15);
+	    rtc_gpio_isolate(GPIO_NUM_25);
 	    esp_deep_sleep_start();
-
 
 
 
@@ -175,8 +172,7 @@ static void init_ulp_program()
      * GPIO15 may be connected to ground to suppress boot messages.
      * GPIO12 may be pulled high to select flash voltage.
      */
-    rtc_gpio_isolate(GPIO_NUM_12);
-    rtc_gpio_isolate(GPIO_NUM_15);
+
 }
 
 static void start_ulp_program()

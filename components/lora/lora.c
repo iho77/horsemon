@@ -354,7 +354,7 @@ lora_init(void)
     * Check version.
     */
    uint8_t version = lora_read_reg(REG_VERSION);
-   assert(version == 0x12);
+   //assert(version == 0x12);
 
    /*
     * Default configuration.
