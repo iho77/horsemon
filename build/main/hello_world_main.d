@@ -94,8 +94,47 @@ hello_world_main.o: /home/iho/esp/hello_world/main/hello_world_main.c \
  /home/iho/esp/esp-idf/components/driver/include/driver/adc.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h \
  /home/iho/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h \
+ /home/iho/esp/esp-idf/components/vfs/include/esp_vfs.h \
+ /home/iho/esp/esp-idf/components/newlib/include/unistd.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h \
+ /home/iho/esp/esp-idf/components/freertos/include/freertos/semphr.h \
+ /home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/time.h \
+ /home/iho/esp/esp-idf/components/newlib/include/time.h \
+ /home/iho/esp/esp-idf/components/newlib/include/machine/time.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/time.h \
+ /home/iho/esp/esp-idf/components/newlib/include/dirent.h \
+ /home/iho/esp/esp-idf/components/vfs/include/sys/dirent.h \
  /home/iho/esp/esp-idf/components/newlib/include/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/string.h \
+ /home/iho/esp/esp-idf/components/fatfs/src/esp_vfs_fat.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_types.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_host.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_types.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/sdspi_host.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/spi_master.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/spi_common.h \
+ /home/iho/esp/esp-idf/components/esp32/include/rom/lldesc.h \
+ /home/iho/esp/esp-idf/components/esp32/include/rom/queue.h \
+ /home/iho/esp/esp-idf/components/soc/include/soc/spi_periph.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/spi_pins.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/spi_reg.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
+ /home/iho/esp/esp-idf/components/fatfs/src/ff.h \
+ /home/iho/esp/esp-idf/components/fatfs/src/integer.h \
+ /home/iho/esp/esp-idf/components/fatfs/src/ffconf.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/param.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/syslimits.h \
+ /home/iho/esp/esp-idf/components/newlib/include/machine/endian.h \
+ /home/iho/esp/esp-idf/components/newlib/include/machine/param.h \
+ /home/iho/esp/esp-idf/components/wear_levelling/include/wear_levelling.h \
+ /home/iho/esp/esp-idf/components/log/include/esp_log.h \
+ /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h \
+ /home/iho/esp/esp-idf/components/spi_flash/include/esp_partition.h \
+ /home/iho/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/iho/esp/hello_world/components/lora/include/lora.h
 
 /home/iho/esp/esp-idf/components/newlib/include/stdio.h:
@@ -288,9 +327,87 @@ hello_world_main.o: /home/iho/esp/hello_world/main/hello_world_main.c \
 
 /home/iho/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h:
 
+/home/iho/esp/esp-idf/components/vfs/include/esp_vfs.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/unistd.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h:
+
+/home/iho/esp/esp-idf/components/freertos/include/freertos/semphr.h:
+
+/home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/stat.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/time.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/time.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/machine/time.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/time.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/dirent.h:
+
+/home/iho/esp/esp-idf/components/vfs/include/sys/dirent.h:
+
 /home/iho/esp/esp-idf/components/newlib/include/string.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/string.h:
+
+/home/iho/esp/esp-idf/components/fatfs/src/esp_vfs_fat.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_types.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_host.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_types.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/sdspi_host.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/spi_master.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/spi_common.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/rom/lldesc.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/rom/queue.h:
+
+/home/iho/esp/esp-idf/components/soc/include/soc/spi_periph.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/spi_pins.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/spi_reg.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h:
+
+/home/iho/esp/esp-idf/components/fatfs/src/ff.h:
+
+/home/iho/esp/esp-idf/components/fatfs/src/integer.h:
+
+/home/iho/esp/esp-idf/components/fatfs/src/ffconf.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/param.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/syslimits.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/machine/endian.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/machine/param.h:
+
+/home/iho/esp/esp-idf/components/wear_levelling/include/wear_levelling.h:
+
+/home/iho/esp/esp-idf/components/log/include/esp_log.h:
+
+/home/iho/esp/esp-idf/components/log/include/esp_log_internal.h:
+
+/home/iho/esp/esp-idf/components/spi_flash/include/esp_partition.h:
+
+/home/iho/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
 /home/iho/esp/hello_world/components/lora/include/lora.h:
 /home/iho/esp/hello_world/main/./hello_world_main.c:
