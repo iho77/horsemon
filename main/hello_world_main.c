@@ -26,17 +26,9 @@
 #include "esp_vfs_fat.h"
 #include "string.h"
 #include "lora.h"
+#include "config.h"
 #include "features.h"
 
-
-
-
-#define DEFAULT_VREF    1109        //Use adc2_vref_to_gpio() to obtain a better estimate
-#define NO_OF_SAMPLES   512   //ULP got 512 readings i.e.
-#define FREQ 32 // sampling frequency
-#define DATA_BUF_SIZE 512 //size of buffer for acc readings
-#define FEATURES_NUM 2
-#define NUM_OF_WINDOWS 4 //number of winodws size = NO_OF_SAMPLES to store before calculate features
 
 #define STORAGE_NAMESPACE "storage"
 
@@ -54,8 +46,6 @@ const char *base_path = "/spiflash";
 
 static esp_adc_cal_characteristics_t adc_chars;
 
-float data[7][NO_OF_SAMPLES*NUM_OF_WINDOWS];
-
 uint16_t window[NO_OF_SAMPLES][3],batch[NO_OF_SAMPLES*NUM_OF_WINDOWS][3];
 
 float features[FEATURES_NUM];
@@ -68,59 +58,10 @@ typedef enum {
 	RESET = 2
 } opcode_t;
 
-
-
-/* This function is called once after power-on reset, to load ULP program into
- * RTC memory and configure the ADC.
- */
-static void init_ulp_program();
-
-/* This function is called every time before going into deep sleep.
- * It starts the ULP program and resets measurement counter.
- */
-static void start_ulp_program();
-
-
-void lorasend();
-
-
-
-
-
-void get_window(){
-	        esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN_DB_6, ADC_WIDTH_BIT_12, DEFAULT_VREF, (esp_adc_cal_characteristics_t *)&adc_chars);
-			for (int i=0;i<NO_OF_SAMPLES;i++){
-			window[i][0] = esp_adc_cal_raw_to_voltage((&ulp_channel_0_measurements)[i] & UINT16_MAX, &adc_chars);
-			window[i][1] = esp_adc_cal_raw_to_voltage((&ulp_channel_1_measurements)[i] & UINT16_MAX, &adc_chars);
-			window[i][2] = esp_adc_cal_raw_to_voltage((&ulp_channel_2_measurements)[i] & UINT16_MAX, &adc_chars);
-			//printf("%d;%d;%d\n",window[0][i],window[1][i],window[2][i]);
-
-		}
-}
-
-
-void proceed_batch(){
-	for (int i=0;i<NO_OF_SAMPLES*NUM_OF_WINDOWS;i++){
-		data[0][i] = (float)batch[i][0];
-		data[1][i] = (float)batch[i][1];
-		data[2][i] = (float)batch[i][2];
-		data[3][i] = (float)sqrt(pow(data[0][i],2)+pow(data[1][i],2)+pow(data[2][i],2));
-		data[4][i] = 0.0; //roll
-		data[5][i] = 0.0; //pitch
-		data[6][i] = 0.0; //yow
-		//printf("%f;%f;%f;%f\n",data[0][i],data[1][i],data[2][i],data[3][i]);
-	}
-}
-
-
-static void init_ulp_program();
-static void start_ulp_program();
 esp_err_t restart_counter_op(opcode_t), data_op(opcode_t);
 
 
-void proceed_features(){
-	for(int i=0;i<FEATURES_NUM;i++) features[i] = features_calc[i](data,NO_OF_SAMPLES*NUM_OF_WINDOWS);
-}
+static void start_ulp_program(), init_ulp_program(),start_ulp_program(), lorasend(),get_window(),proceed_batch(),proceed_features();
 
 void app_main()
 {
@@ -155,17 +96,13 @@ void app_main()
 	    		restart_counter_op(RESET); //reset_counter = 0
                 data_op(READ); //read 4 windows to data[]
                 data_op(RESET); //erase data
-                proceed_batch();
+             //   proceed_batch(); //compile full 64 s sample from flash
                 proceed_features(); //made features calculations
-                /*
-               	lora_init();
-               	lora_set_frequency(433e6);
-               	lora_enable_crc();
-                lorasend(); //send features to gw */
+               	lorasend(); //send to gw
            	} else {
-           		get_window();
-           		data_op(SAVE);
-           		restart_counter_op(SAVE);
+           		get_window();  //collect data acquired by ULP
+           		data_op(SAVE);  // save to flash
+           		restart_counter_op(SAVE);  //inc restart counter
            		ESP_LOGI(TAG, "Save restart counter:%d",restart_counter);
 
            	}
@@ -187,6 +124,17 @@ void app_main()
 
 
 }
+
+void proceed_features(){
+	features_init(batch);
+	for(int i=0;i<FEATURES_NUM;i++) {
+		features[i] = features_calc[i]();
+		printf("Feature #%d = %f\n",i,features[i]);
+	}
+}
+
+
+
 
 esp_err_t restart_counter_op(opcode_t cmd){
 	nvs_handle my_handle;
@@ -288,6 +236,9 @@ esp_err_t data_op(opcode_t cmd){
 
 
 void lorasend(){
+	lora_init();
+	lora_set_frequency(433e6);
+   	lora_enable_crc();
 	uint8_t msg[6+1+FEATURES_NUM*sizeof(float)]; //features + addr + number of features
 	//printf("Size of LoRa packet is:%d\n", sizeof(msg));
 	esp_efuse_mac_get_default(msg);
@@ -336,4 +287,31 @@ static void start_ulp_program()
     esp_err_t err = ulp_run((&ulp_entry - RTC_SLOW_MEM) / sizeof(uint32_t));
     ESP_ERROR_CHECK(err);
 }
+
+
+void get_window(){
+	        esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN_DB_6, ADC_WIDTH_BIT_12, DEFAULT_VREF, (esp_adc_cal_characteristics_t *)&adc_chars);
+			for (int i=0;i<NO_OF_SAMPLES;i++){
+			window[i][0] = esp_adc_cal_raw_to_voltage((&ulp_channel_0_measurements)[i] & UINT16_MAX, &adc_chars)-1600;
+			window[i][1] = esp_adc_cal_raw_to_voltage((&ulp_channel_1_measurements)[i] & UINT16_MAX, &adc_chars)-1600;
+			window[i][2] = esp_adc_cal_raw_to_voltage((&ulp_channel_2_measurements)[i] & UINT16_MAX, &adc_chars)-1600;
+			// printf("%d;%d;%d\n",window[i][0],window[i][1],window[i][2]);
+		}
+}
+
+
+void proceed_batch(){
+	/*
+	for (int i=0;i<NO_OF_SAMPLES*NUM_OF_WINDOWS;i++){
+		data[0][i] = batch[i][0];
+		data[1][i] = batch[i][1];
+		data[2][i] = batch[i][2];
+		//data[3][i] = (float)sqrt(pow(data[0][i],2)+pow(data[1][i],2)+pow(data[2][i],2));
+		//data[4][i] = 0.0; //roll
+		//data[5][i] = 0.0; //pitch
+		//data[6][i] = 0.0; //yow
+		printf("%d;%d;%d;\n",data[0][i],data[1][i],data[2][i]);
+	} */
+}
+
 
