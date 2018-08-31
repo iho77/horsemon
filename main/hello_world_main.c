@@ -55,7 +55,7 @@ const char *base_path = "/spiflash";
 static esp_adc_cal_characteristics_t adc_chars;
 
 float data[7][NO_OF_SAMPLES*NUM_OF_WINDOWS];
-uint16_t window[3][NO_OF_SAMPLES],batch[3][NO_OF_SAMPLES*NUM_OF_WINDOWS];
+uint16_t window[NO_OF_SAMPLES][3],batch[NO_OF_SAMPLES*NUM_OF_WINDOWS][3];
 float features[FEATURES_NUM];
 
 
@@ -103,25 +103,25 @@ typedef enum {
 void get_window(){
 	        esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN_DB_6, ADC_WIDTH_BIT_12, DEFAULT_VREF, (esp_adc_cal_characteristics_t *)&adc_chars);
 			for (int i=0;i<NO_OF_SAMPLES;i++){
-			window[0][i] = esp_adc_cal_raw_to_voltage((&ulp_channel_0_measurements)[i] & UINT16_MAX, &adc_chars);
-			window[1][i] = esp_adc_cal_raw_to_voltage((&ulp_channel_1_measurements)[i] & UINT16_MAX, &adc_chars);
-			window[2][i] = esp_adc_cal_raw_to_voltage((&ulp_channel_2_measurements)[i] & UINT16_MAX, &adc_chars);
+			window[i][0] = esp_adc_cal_raw_to_voltage((&ulp_channel_0_measurements)[i] & UINT16_MAX, &adc_chars);
+			window[i][1] = esp_adc_cal_raw_to_voltage((&ulp_channel_1_measurements)[i] & UINT16_MAX, &adc_chars);
+			window[i][2] = esp_adc_cal_raw_to_voltage((&ulp_channel_2_measurements)[i] & UINT16_MAX, &adc_chars);
 			//printf("%d;%d;%d\n",window[0][i],window[1][i],window[2][i]);
 
 		}
 }
 
 
-void proceed_butch(){
+void proceed_batch(){
 	for (int i=0;i<NO_OF_SAMPLES*NUM_OF_WINDOWS;i++){
-		data[0][i] = batch[0][i];
-		data[1][i] = batch[1][i];
-		data[2][i] = batch[2][i];
+		data[0][i] = (float)batch[i][0];
+		data[1][i] = (float)batch[i][1];
+		data[2][i] = (float)batch[i][2];
 		data[3][i] = (float)sqrt(pow(data[0][i],2)+pow(data[1][i],2)+pow(data[2][i],2));
 		data[4][i] = 0.0; //roll
 		data[5][i] = 0.0; //pitch
 		data[6][i] = 0.0; //yow
-		printf("%f;%f;%f;%f\n",data[0][i],data[1][i],data[2][i],data[3][i]);
+		//printf("%f;%f;%f;%f\n",data[0][i],data[1][i],data[2][i],data[3][i]);
 	}
 }
 
@@ -136,7 +136,8 @@ void proceed_features(){
 }
 
 void app_main()
-{   static const char *TAG = "main";
+{
+	static const char *TAG = "main";
 
     esp_sleep_wakeup_cause_t cause = esp_sleep_get_wakeup_cause();
 
@@ -154,6 +155,7 @@ void app_main()
     if (cause != ESP_SLEEP_WAKEUP_ULP) {
 	        ESP_LOGI(TAG,"Not ULP wakeup");
     	    restart_counter_op(RESET);
+    	    data_op(RESET);
             init_ulp_program();
 	    } else {
 	        ESP_LOGI(TAG,"Deep sleep wakeup");
@@ -166,7 +168,7 @@ void app_main()
 	    		restart_counter_op(RESET); //reset_counter = 0
                 data_op(READ); //read 4 windows to data[]
                 data_op(RESET); //erase data
-                proceed_butch();
+                proceed_batch();
                 proceed_features(); //made features calculations
                 /*
                	lora_init();
@@ -265,6 +267,7 @@ esp_err_t data_op(opcode_t cmd){
 	    if (f == NULL) {
 		  ESP_LOGE(TAG, "Failed to open file for writing");
 		  return ESP_FAIL;}
+	    ESP_LOGI(TAG,"Writing %d bytes to file",sizeof(window));
 	    fwrite(window,sizeof(window),1,f);
 	    fclose(f);
 	    ESP_LOGI(TAG, "File written");
@@ -274,6 +277,7 @@ esp_err_t data_op(opcode_t cmd){
 		if (f == NULL) {
 		  ESP_LOGE(TAG, "Failed to open file for writing");
 		return ESP_FAIL;}
+		ESP_LOGI(TAG,"Reading %d bytes from file",sizeof(batch));
 		fread(batch,sizeof(batch),1,f);
 		fclose(f);
 		ESP_LOGI(TAG, "File read");
