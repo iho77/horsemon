@@ -46,7 +46,7 @@ const char *base_path = "/spiflash";
 
 static esp_adc_cal_characteristics_t adc_chars;
 
-uint16_t window[NO_OF_SAMPLES][3],batch[NO_OF_SAMPLES*NUM_OF_WINDOWS][3];
+int32_t window[NO_OF_SAMPLES][3],batch[NO_OF_SAMPLES*NUM_OF_WINDOWS][3];
 
 float features[FEATURES_NUM];
 
@@ -270,11 +270,6 @@ static void init_ulp_program()
     /* Set ULP wake up period to 32Hz */
     ulp_set_wakeup_period(0, 31250);
 
-    /* Disconnect GPIO12 and GPIO15 to remove current drain through
-     * pullup/pulldown resistors.
-     * GPIO15 may be connected to ground to suppress boot messages.
-     * GPIO12 may be pulled high to select flash voltage.
-     */
 
 }
 
@@ -295,7 +290,7 @@ void get_window(){
 			window[i][0] = esp_adc_cal_raw_to_voltage((&ulp_channel_0_measurements)[i] & UINT16_MAX, &adc_chars)-1600;
 			window[i][1] = esp_adc_cal_raw_to_voltage((&ulp_channel_1_measurements)[i] & UINT16_MAX, &adc_chars)-1600;
 			window[i][2] = esp_adc_cal_raw_to_voltage((&ulp_channel_2_measurements)[i] & UINT16_MAX, &adc_chars)-1600;
-			// printf("%d;%d;%d\n",window[i][0],window[i][1],window[i][2]);
+			//printf("%d;%d;%d\n",window[i][0],window[i][1],window[i][2]);
 		}
 }
 
