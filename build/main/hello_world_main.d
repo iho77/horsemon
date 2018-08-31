@@ -135,7 +135,8 @@ hello_world_main.o: /home/iho/esp/hello_world/main/hello_world_main.c \
  /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/iho/esp/esp-idf/components/spi_flash/include/esp_partition.h \
  /home/iho/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /home/iho/esp/hello_world/components/lora/include/lora.h
+ /home/iho/esp/hello_world/components/lora/include/lora.h \
+ /home/iho/esp/hello_world/main/features.h
 
 /home/iho/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -410,4 +411,6 @@ hello_world_main.o: /home/iho/esp/hello_world/main/hello_world_main.c \
 /home/iho/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
 /home/iho/esp/hello_world/components/lora/include/lora.h:
+
+/home/iho/esp/hello_world/main/features.h:
 /home/iho/esp/hello_world/main/./hello_world_main.c:

@@ -26,6 +26,7 @@
 #include "esp_vfs_fat.h"
 #include "string.h"
 #include "lora.h"
+#include "features.h"
 
 
 
@@ -35,7 +36,6 @@
 #define FREQ 32 // sampling frequency
 #define DATA_BUF_SIZE 512 //size of buffer for acc readings
 #define FEATURES_NUM 2
-#define DEV_ADDR 0x01
 #define NUM_OF_WINDOWS 4 //number of winodws size = NO_OF_SAMPLES to store before calculate features
 
 #define STORAGE_NAMESPACE "storage"
@@ -55,8 +55,18 @@ const char *base_path = "/spiflash";
 static esp_adc_cal_characteristics_t adc_chars;
 
 float data[7][NO_OF_SAMPLES*NUM_OF_WINDOWS];
+
 uint16_t window[NO_OF_SAMPLES][3],batch[NO_OF_SAMPLES*NUM_OF_WINDOWS][3];
+
 float features[FEATURES_NUM];
+
+int32_t restart_counter;
+
+typedef enum {
+	READ = 0,
+	SAVE = 1,
+	RESET = 2
+} opcode_t;
 
 
 
@@ -74,29 +84,6 @@ static void start_ulp_program();
 void lorasend();
 
 
-float f_mean(){
-	return data[0][0];
-}
-
-float f_sum(){
-	float res = 0.0;
-	for (int i=0;i<DATA_BUF_SIZE;i++){
-		res += data[0][i];
-	}
-	return res;
-}
-
-
-float (* features_calc[FEATURES_NUM])() = {f_mean,f_sum};
-
-
-int32_t restart_counter;
-
-typedef enum {
-	READ = 0,
-	SAVE = 1,
-	RESET = 2
-} opcode_t;
 
 
 
@@ -132,7 +119,7 @@ esp_err_t restart_counter_op(opcode_t), data_op(opcode_t);
 
 
 void proceed_features(){
-	for(int i=0;i<FEATURES_NUM;i++) features[i] = features_calc[i]();
+	for(int i=0;i<FEATURES_NUM;i++) features[i] = features_calc[i](data,NO_OF_SAMPLES*NUM_OF_WINDOWS);
 }
 
 void app_main()
