@@ -172,6 +172,7 @@ void app_main()
         		break;
         	case LoRa:
         		ESP_LOGI(TAG, "Going deep sleep");
+        		fflush(stdout);
         		start_ulp_program();
         	    ESP_ERROR_CHECK( esp_sleep_enable_ulp_wakeup() );
         	    rtc_gpio_isolate(GPIO_NUM_4);
@@ -293,6 +294,7 @@ esp_err_t data_op(opcode_t cmd){
 
 
 void lorasend(){
+	static const char *TAG = "lora_send";
 	lora_init();
 	lora_set_frequency(433e6);
    	lora_enable_crc();
@@ -355,7 +357,7 @@ void get_window(){
 			window[i][0] = esp_adc_cal_raw_to_voltage((&ulp_channel_0_measurements)[i] & UINT16_MAX, &adc_chars)-1600;
 			window[i][1] = esp_adc_cal_raw_to_voltage((&ulp_channel_1_measurements)[i] & UINT16_MAX, &adc_chars)-1600;
 			window[i][2] = esp_adc_cal_raw_to_voltage((&ulp_channel_2_measurements)[i] & UINT16_MAX, &adc_chars)-1600;
-			printf("%d;%d;%d\n",window[i][0],window[i][1],window[i][2]);
+			//printf("%d;%d;%d\n",window[i][0],window[i][1],window[i][2]);
 		}
 }
 
@@ -364,17 +366,17 @@ void send_window(){
 }
 
 void proceed_batch(){
-	/*
+/*
 	for (int i=0;i<NO_OF_SAMPLES*NUM_OF_WINDOWS;i++){
-		data[0][i] = batch[i][0];
+		window[0][i] = batch[i][0];
 		data[1][i] = batch[i][1];
 		data[2][i] = batch[i][2];
 		//data[3][i] = (float)sqrt(pow(data[0][i],2)+pow(data[1][i],2)+pow(data[2][i],2));
 		//data[4][i] = 0.0; //roll
 		//data[5][i] = 0.0; //pitch
 		//data[6][i] = 0.0; //yow
-		printf("%d;%d;%d;\n",data[0][i],data[1][i],data[2][i]);
-	} */
+	//	printf("%d;%d;%d;\n",data[0][i],data[1][i],data[2][i]);*/
+
 }
 
 esp_err_t event_handler(void *ctx, system_event_t *event)
@@ -422,7 +424,7 @@ static void initialise_wifi(void)
 }
 
 mode_t check_mode(){
-	return RAW;
+	return LoRa;
 }
 
 void create_socket(){
