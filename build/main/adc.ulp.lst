@@ -397,9 +397,6 @@ ESP32ULP GAS  adc.ulp.pS 			page 1
   76 00a4 00020582 	   jumpr wake_up, max_samples, ge
   77 00a8 000000B0 	   halt
   78              	wake_up:
-  79 00ac 3000CC29 	   REG_RD ((((0x3ff48000 + 0xc0)) - 0x3ff48000) / 4), ((19) + ((((((((0x1) >> (0)) & 1) + (((0x1) >
-  80 00b0 10004072 	   AND r0, r0, 1
-  81 00b4 AC004080 	   JUMP wake_up, eq
-  82 00b8 01000090 	   WAKE
-  83 00bc 0600601C 	   REG_WR 0x006, 24, 24, 0
-  84 00c0 000000B0 	   HALT
+  79 00ac 01000090 	   WAKE
+  80 00b0 0600601C 	   REG_WR 0x006, 24, 24, 0
+  81 00b4 000000B0 	   HALT

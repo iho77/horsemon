@@ -7,15 +7,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <unistd.h>
 #include "freertos/FreeRTOS.h"
+#include "freertos/event_groups.h"
 #include "freertos/task.h"
+#include "freertos/semphr.h"
+#include "soc/rtc_cntl_reg.h"
 #include "esp_sleep.h"
 #include "esp_system.h"
+#include "esp_wifi.h"
+#include "esp_event_loop.h"
 #include "nvs.h"
 #include "nvs_flash.h"
 #include "soc/rtc_cntl_reg.h"
 #include "soc/sens_reg.h"
 #include "driver/rtc_io.h"
+#include "driver/rtc_cntl.h"
 #include "driver/dac.h"
 #include "esp32/ulp.h"
 #include "ulp_main.h"
@@ -29,6 +36,11 @@
 #include "config.h"
 #include "features.h"
 
+#include "lwip/err.h"
+#include "lwip/sockets.h"
+#include "lwip/sys.h"
+#include <lwip/netdb.h>
+
 
 #define STORAGE_NAMESPACE "storage"
 
@@ -41,10 +53,16 @@ extern const uint8_t ulp_main_bin_end[]   asm("_binary_ulp_main_bin_end");
 // Handle of the wear levelling library instance
 static wl_handle_t s_wl_handle = WL_INVALID_HANDLE;
 
+static EventGroupHandle_t wifi_event_group;
+SemaphoreHandle_t ulp_isr_sem;
+
 // Mount path for the partition
 const char *base_path = "/spiflash";
 
 static esp_adc_cal_characteristics_t adc_chars;
+
+const int IPV4_GOTIP_BIT = BIT0;
+const int ULP_GOT_WINDOWS = BIT1;
 
 int32_t window[NO_OF_SAMPLES][3],batch[NO_OF_SAMPLES*NUM_OF_WINDOWS][3];
 
@@ -58,10 +76,18 @@ typedef enum {
 	RESET = 2
 } opcode_t;
 
+typedef enum {
+	LoRa = 0,
+	RAW = 1
+} op_mode_t;
+
+op_mode_t op_mode = LoRa, check_mode();
+
 esp_err_t restart_counter_op(opcode_t), data_op(opcode_t);
 
 
-static void start_ulp_program(), init_ulp_program(),start_ulp_program(), lorasend(),get_window(),proceed_batch(),proceed_features();
+static void start_ulp_program(), init_ulp_program(),start_ulp_program(), lorasend(),get_window(),send_window(),
+		    proceed_batch(),proceed_features(),initialise_wifi(), ulp_isr(void *);
 
 void app_main()
 {
@@ -82,47 +108,70 @@ void app_main()
 
     if (cause != ESP_SLEEP_WAKEUP_ULP) {
 	        ESP_LOGI(TAG,"Not ULP wakeup");
-    	    restart_counter_op(RESET);
+	        op_mode = check_mode();
+	        restart_counter_op(RESET);
     	    data_op(RESET);
             init_ulp_program();
-	    } else {
-	        ESP_LOGI(TAG,"Deep sleep wakeup");
+     	    } else {
+	        ESP_LOGI(TAG,"Deep sleep wakeup, LoRa mode");
 	    	restart_counter_op(READ);
 	    	ESP_LOGI(TAG,"Restart counter:%d",restart_counter);
+	    	 		if (restart_counter == NUM_OF_WINDOWS) {
+	    			    		ESP_LOGI(TAG, "Collected %d windows", restart_counter);
+	    			    		restart_counter_op(RESET); //reset_counter = 0
+	    		                data_op(READ); //read 4 windows to data[]
+	    		                data_op(RESET); //erase data
+	    		             //   proceed_batch(); //compile full 64 s sample from flash
+	    		                proceed_features(); //made features calculations
+	    		               	lorasend(); //send to gw
+	    		           	} else {
+	    		           		get_window();  //collect data acquired by ULP
+	    		           		data_op(SAVE);  // save to flash
+	    		           		restart_counter_op(SAVE);  //inc restart counter
+	    		           		ESP_LOGI(TAG, "Save restart counter:%d",restart_counter);
 
+	    		           	}
 
-	    	if (restart_counter == NUM_OF_WINDOWS) {
-	    		ESP_LOGI(TAG, "Collected %d windows", restart_counter);
-	    		restart_counter_op(RESET); //reset_counter = 0
-                data_op(READ); //read 4 windows to data[]
-                data_op(RESET); //erase data
-             //   proceed_batch(); //compile full 64 s sample from flash
-                proceed_features(); //made features calculations
-               	lorasend(); //send to gw
-           	} else {
-           		get_window();  //collect data acquired by ULP
-           		data_op(SAVE);  // save to flash
-           		restart_counter_op(SAVE);  //inc restart counter
-           		ESP_LOGI(TAG, "Save restart counter:%d",restart_counter);
+	    	}
 
-           	}
-
-
-
-	    }
-
-   	    ESP_LOGI(TAG, "Entering deep sleep");
-        fflush(stdout);
-	    start_ulp_program();
-	    ESP_ERROR_CHECK( esp_sleep_enable_ulp_wakeup() );
-	    //seems it does not have any sense on Heltec esp32-LoRa module
-	    rtc_gpio_isolate(GPIO_NUM_4);
-	    rtc_gpio_isolate(GPIO_NUM_15);
-	    rtc_gpio_isolate(GPIO_NUM_25);
-	    esp_deep_sleep_start();
-
-
-
+        switch (op_mode){
+        	case RAW:
+        		ESP_LOGI(TAG, "Entereing RAW mode loop");
+        		int result;
+        		ulp_isr_sem = xSemaphoreCreateBinary();
+        		assert(ulp_isr_sem);
+        		esp_err_t err = rtc_isr_register(&ulp_isr, (void*) ulp_isr_sem, RTC_CNTL_SAR_INT_ST_M);
+        		ESP_ERROR_CHECK(err);
+        		REG_SET_BIT(RTC_CNTL_INT_ENA_REG, RTC_CNTL_ULP_CP_INT_ENA_M);
+        		ESP_LOGI(TAG, "Starting ULP");
+        		start_ulp_program();
+        		while(1){
+        			ESP_LOGI(TAG, "Waiting for ULP interrupt");
+        			result = xSemaphoreTake(ulp_isr_sem, (20*1000) / portTICK_PERIOD_MS);
+        		    if (result == pdTRUE) {
+        				    	        printf("ULP ISR triggered\n");
+        				    	        restart_counter_op(READ);
+        				    	        ESP_LOGI(TAG,"Restart counter :%d", restart_counter);
+        				    	        get_window();  //collect data acquired by ULP
+        				    	        send_window();  // send to udp
+        				    	        restart_counter_op(SAVE);  //inc restart counter
+        				    	        start_ulp_program();
+        				    	    } else {
+        				    	        printf("ULP ISR timeout\n");
+        				    	        esp_restart();
+        				    	    };
+        		    };
+        		break;
+        	case LoRa:
+        		ESP_LOGI(TAG, "Going deep sleep");
+        		start_ulp_program();
+        	    ESP_ERROR_CHECK( esp_sleep_enable_ulp_wakeup() );
+        	    rtc_gpio_isolate(GPIO_NUM_4);
+        	    rtc_gpio_isolate(GPIO_NUM_15);
+        	    rtc_gpio_isolate(GPIO_NUM_25);
+        	    esp_deep_sleep_start();
+        		break;
+        }
 }
 
 void proceed_features(){
@@ -284,6 +333,14 @@ static void start_ulp_program()
 }
 
 
+static void ulp_isr(void* arg)
+{
+    BaseType_t xHigherPriorityTaskWoken = pdTRUE;
+    xSemaphoreGiveFromISR(ulp_isr_sem,&xHigherPriorityTaskWoken);
+
+}
+
+
 void get_window(){
 	        esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN_DB_6, ADC_WIDTH_BIT_12, DEFAULT_VREF, (esp_adc_cal_characteristics_t *)&adc_chars);
 			for (int i=0;i<NO_OF_SAMPLES;i++){
@@ -294,6 +351,9 @@ void get_window(){
 		}
 }
 
+void send_window(){
+	return;
+}
 
 void proceed_batch(){
 	/*
@@ -309,4 +369,47 @@ void proceed_batch(){
 	} */
 }
 
+esp_err_t event_handler(void *ctx, system_event_t *event)
+{
+	 switch(event->event_id) {
+	    case SYSTEM_EVENT_STA_START:
+	        esp_wifi_connect();
+	        break;
+	    case SYSTEM_EVENT_STA_GOT_IP:
+	        xEventGroupSetBits(wifi_event_group, IPV4_GOTIP_BIT);
+	        break;
+	    case SYSTEM_EVENT_STA_DISCONNECTED:
+	        /* This is a workaround as ESP32 WiFi libs don't currently
+	           auto-reassociate. */
+	        esp_wifi_connect();
+	        xEventGroupClearBits(wifi_event_group, IPV4_GOTIP_BIT);
+	        break;
+	    default:
+	        break;
+	    }
+	    return ESP_OK;
+}
 
+static void initialise_wifi(void)
+{   static const char *TAG = "init_wifi";
+    tcpip_adapter_init();
+    wifi_event_group = xEventGroupCreate();
+    ESP_ERROR_CHECK( esp_event_loop_init(event_handler, NULL) );
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    ESP_ERROR_CHECK( esp_wifi_init(&cfg) );
+    ESP_ERROR_CHECK( esp_wifi_set_storage(WIFI_STORAGE_RAM) );
+    wifi_config_t wifi_config = {
+        .sta = {
+            .ssid = EXAMPLE_WIFI_SSID,
+            .password = EXAMPLE_WIFI_PASS,
+        },
+    };
+    ESP_LOGI(TAG, "Setting WiFi configuration SSID %s...", wifi_config.sta.ssid);
+    ESP_ERROR_CHECK( esp_wifi_set_mode(WIFI_MODE_STA) );
+    ESP_ERROR_CHECK( esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_config) );
+    ESP_ERROR_CHECK( esp_wifi_start() );
+}
+
+mode_t check_mode(){
+	return RAW;
+}

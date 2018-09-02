@@ -8,33 +8,33 @@ ram              0x0000000000000000 0x0000000000001f40 rw
 Linker script and memory map
 
 
-.text           0x0000000000000000       0xc4 load address 0x000000000000000c
+.text           0x0000000000000000       0xb8 load address 0x000000000000000c
  *(.text)
- .text          0x0000000000000000       0xc4 adc.ulp.o
+ .text          0x0000000000000000       0xb8 adc.ulp.o
                 0x0000000000000000                entry
 
-.data           0x00000000000000c4        0x0 load address 0x00000000000000d0
-                0x00000000000000c4                . = ALIGN (0x4)
+.data           0x00000000000000b8        0x0 load address 0x00000000000000c4
+                0x00000000000000b8                . = ALIGN (0x4)
  *(.data)
- .data          0x00000000000000c4        0x0 adc.ulp.o
+ .data          0x00000000000000b8        0x0 adc.ulp.o
 
-.bss            0x00000000000000c4     0x1810 load address 0x00000000000000d0
-                0x00000000000000c4                . = ALIGN (0x4)
+.bss            0x00000000000000b8     0x1810 load address 0x00000000000000c4
+                0x00000000000000b8                . = ALIGN (0x4)
  *(.bss)
- .bss           0x00000000000000c4     0x1810 adc.ulp.o
-                0x00000000000000c4                sample_counter
-                0x00000000000000c8                tmp_ch_0
-                0x00000000000000cc                tmp_ch_1
-                0x00000000000000d0                tmp_ch_2
-                0x00000000000000d4                channel_0_measurements
-                0x00000000000008d4                channel_1_measurements
-                0x00000000000010d4                channel_2_measurements
+ .bss           0x00000000000000b8     0x1810 adc.ulp.o
+                0x00000000000000b8                sample_counter
+                0x00000000000000bc                tmp_ch_0
+                0x00000000000000c0                tmp_ch_1
+                0x00000000000000c4                tmp_ch_2
+                0x00000000000000c8                channel_0_measurements
+                0x00000000000008c8                channel_1_measurements
+                0x00000000000010c8                channel_2_measurements
 
-.header         0x00000000000018d4        0xc load address 0x0000000000000000
-                0x00000000000018d4        0x4 LONG 0x706c75
-                0x00000000000018d8        0x2 SHORT 0xc LOADADDR (.text)
-                0x00000000000018da        0x2 SHORT 0xc4 SIZEOF (.text)
-                0x00000000000018dc        0x2 SHORT 0x0 SIZEOF (.data)
-                0x00000000000018de        0x2 SHORT 0x1810 SIZEOF (.bss)
+.header         0x00000000000018c8        0xc load address 0x0000000000000000
+                0x00000000000018c8        0x4 LONG 0x706c75
+                0x00000000000018cc        0x2 SHORT 0xc LOADADDR (.text)
+                0x00000000000018ce        0x2 SHORT 0xb8 SIZEOF (.text)
+                0x00000000000018d0        0x2 SHORT 0x0 SIZEOF (.data)
+                0x00000000000018d2        0x2 SHORT 0x1810 SIZEOF (.bss)
 LOAD adc.ulp.o
 OUTPUT(ulp_main.elf elf32-esp32ulp)

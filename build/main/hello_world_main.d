@@ -21,6 +21,9 @@ hello_world_main.o: /home/iho/esp/hello_world/main/hello_world_main.c \
  /home/iho/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/iho/esp/esp-idf/components/newlib/include/alloca.h \
  /home/iho/esp/esp-idf/components/newlib/include/math.h \
+ /home/iho/esp/esp-idf/components/newlib/include/unistd.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -76,17 +79,60 @@ hello_world_main.o: /home/iho/esp/hello_world/main/hello_world_main.c \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
+ /home/iho/esp/esp-idf/components/freertos/include/freertos/event_groups.h \
+ /home/iho/esp/esp-idf/components/freertos/include/freertos/timers.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/task.h \
  /home/iho/esp/esp-idf/components/newlib/include/limits.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/list.h \
+ /home/iho/esp/esp-idf/components/freertos/include/freertos/task.h \
+ /home/iho/esp/esp-idf/components/freertos/include/freertos/semphr.h \
+ /home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_wifi.h \
+ /home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h \
+ /home/iho/esp/esp-idf/components/esp32/include/rom/queue.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_interface.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_wifi_crypto_types.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_event.h \
+ /home/iho/esp/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h \
+ /home/iho/esp/esp-idf/components/esp32/include/rom/queue.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/time.h \
+ /home/iho/esp/esp-idf/components/newlib/include/time.h \
+ /home/iho/esp/esp-idf/components/newlib/include/machine/time.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/time.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/fcntl.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h \
+ /home/iho/esp/esp-idf/components/vfs/include/sys/ioctl.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/sys/select.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_task.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/debug.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/arch.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/errno.h \
+ /home/iho/esp/esp-idf/components/newlib/include/errno.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/vfs_lwip.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/def.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_event_loop.h \
  /home/iho/esp/esp-idf/components/nvs_flash/include/nvs.h \
  /home/iho/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/iho/esp/esp-idf/components/nvs_flash/include/nvs.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/sens_reg.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/rtc_io.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_gpio_channel.h \
  /home/iho/esp/esp-idf/components/soc/include/soc/rtc_periph.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/rtc_cntl.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/dac.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dac_channel.h \
  /home/iho/esp/esp-idf/components/ulp/include/esp32/ulp.h \
@@ -95,16 +141,6 @@ hello_world_main.o: /home/iho/esp/hello_world/main/hello_world_main.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h \
  /home/iho/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h \
  /home/iho/esp/esp-idf/components/vfs/include/esp_vfs.h \
- /home/iho/esp/esp-idf/components/newlib/include/unistd.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
- /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h \
- /home/iho/esp/esp-idf/components/freertos/include/freertos/semphr.h \
- /home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h \
- /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/time.h \
- /home/iho/esp/esp-idf/components/newlib/include/time.h \
- /home/iho/esp/esp-idf/components/newlib/include/machine/time.h \
- /home/iho/esp/esp-idf/components/newlib/include/sys/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/dirent.h \
  /home/iho/esp/esp-idf/components/vfs/include/sys/dirent.h \
  /home/iho/esp/esp-idf/components/newlib/include/string.h \
@@ -137,7 +173,12 @@ hello_world_main.o: /home/iho/esp/hello_world/main/hello_world_main.c \
  /home/iho/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/iho/esp/hello_world/components/lora/include/lora.h \
  /home/iho/esp/hello_world/main/config.h \
- /home/iho/esp/hello_world/main/features.h
+ /home/iho/esp/hello_world/main/features.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h \
+ /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/netdb.h
 
 /home/iho/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -182,6 +223,12 @@ hello_world_main.o: /home/iho/esp/hello_world/main/hello_world_main.c \
 /home/iho/esp/esp-idf/components/newlib/include/alloca.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/math.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/unistd.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h:
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -293,19 +340,103 @@ hello_world_main.o: /home/iho/esp/hello_world/main/hello_world_main.c \
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
 
+/home/iho/esp/esp-idf/components/freertos/include/freertos/event_groups.h:
+
+/home/iho/esp/esp-idf/components/freertos/include/freertos/timers.h:
+
 /home/iho/esp/esp-idf/components/freertos/include/freertos/task.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/limits.h:
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/list.h:
 
+/home/iho/esp/esp-idf/components/freertos/include/freertos/task.h:
+
+/home/iho/esp/esp-idf/components/freertos/include/freertos/semphr.h:
+
+/home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_wifi.h:
+
+/home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/rom/queue.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_interface.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_wifi_crypto_types.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_event.h:
+
+/home/iho/esp/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/rom/queue.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/time.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/time.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/machine/time.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/time.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/fcntl.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/stat.h:
+
+/home/iho/esp/esp-idf/components/vfs/include/sys/ioctl.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/sys/select.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_task.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/debug.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/arch.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/errno.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/errno.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/errno.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/vfs_lwip.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/def.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_event_loop.h:
+
 /home/iho/esp/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/iho/esp/esp-idf/components/nvs_flash/include/nvs_flash.h:
 
 /home/iho/esp/esp-idf/components/nvs_flash/include/nvs.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/sens_reg.h:
 
@@ -314,6 +445,8 @@ hello_world_main.o: /home/iho/esp/hello_world/main/hello_world_main.c \
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_gpio_channel.h:
 
 /home/iho/esp/esp-idf/components/soc/include/soc/rtc_periph.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/rtc_cntl.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/dac.h:
 
@@ -330,26 +463,6 @@ hello_world_main.o: /home/iho/esp/hello_world/main/hello_world_main.c \
 /home/iho/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h:
 
 /home/iho/esp/esp-idf/components/vfs/include/esp_vfs.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/unistd.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h:
-
-/home/iho/esp/esp-idf/components/freertos/include/freertos/semphr.h:
-
-/home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/sys/stat.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/time.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/time.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/machine/time.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/sys/time.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/dirent.h:
 
@@ -416,4 +529,14 @@ hello_world_main.o: /home/iho/esp/hello_world/main/hello_world_main.c \
 /home/iho/esp/hello_world/main/config.h:
 
 /home/iho/esp/hello_world/main/features.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/err.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/netdb.h:
 /home/iho/esp/hello_world/main/./hello_world_main.c:
