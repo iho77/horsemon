@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <unistd.h>
+#include <lwip/sockets.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/event_groups.h"
 #include "freertos/task.h"
@@ -70,6 +71,8 @@ float features[FEATURES_NUM];
 
 int32_t restart_counter;
 
+//int socket;
+
 typedef enum {
 	READ = 0,
 	SAVE = 1,
@@ -87,7 +90,7 @@ esp_err_t restart_counter_op(opcode_t), data_op(opcode_t);
 
 
 static void start_ulp_program(), init_ulp_program(),start_ulp_program(), lorasend(),get_window(),send_window(),
-		    proceed_batch(),proceed_features(),initialise_wifi(), ulp_isr(void *);
+		    proceed_batch(),proceed_features(),initialise_wifi(), ulp_isr(void *),create_socket();
 
 void app_main()
 {
@@ -137,6 +140,11 @@ void app_main()
         switch (op_mode){
         	case RAW:
         		ESP_LOGI(TAG, "Entereing RAW mode loop");
+        		initialise_wifi();
+        		ESP_LOGI(TAG, "Waiting for AP connection...");
+        		xEventGroupWaitBits(wifi_event_group, IPV4_GOTIP_BIT, false, true, portMAX_DELAY);
+        		ESP_LOGI(TAG, "Connected to AP");
+        		create_socket();
         		int result;
         		ulp_isr_sem = xSemaphoreCreateBinary();
         		assert(ulp_isr_sem);
@@ -147,7 +155,7 @@ void app_main()
         		start_ulp_program();
         		while(1){
         			ESP_LOGI(TAG, "Waiting for ULP interrupt");
-        			result = xSemaphoreTake(ulp_isr_sem, (20*1000) / portTICK_PERIOD_MS);
+        			result = xSemaphoreTake(ulp_isr_sem, portMAX_DELAY);
         		    if (result == pdTRUE) {
         				    	        printf("ULP ISR triggered\n");
         				    	        restart_counter_op(READ);
@@ -347,7 +355,7 @@ void get_window(){
 			window[i][0] = esp_adc_cal_raw_to_voltage((&ulp_channel_0_measurements)[i] & UINT16_MAX, &adc_chars)-1600;
 			window[i][1] = esp_adc_cal_raw_to_voltage((&ulp_channel_1_measurements)[i] & UINT16_MAX, &adc_chars)-1600;
 			window[i][2] = esp_adc_cal_raw_to_voltage((&ulp_channel_2_measurements)[i] & UINT16_MAX, &adc_chars)-1600;
-			//printf("%d;%d;%d\n",window[i][0],window[i][1],window[i][2]);
+			printf("%d;%d;%d\n",window[i][0],window[i][1],window[i][2]);
 		}
 }
 
@@ -370,13 +378,16 @@ void proceed_batch(){
 }
 
 esp_err_t event_handler(void *ctx, system_event_t *event)
-{
+{    static const char *TAG = "WiFi event handler";
+
 	 switch(event->event_id) {
 	    case SYSTEM_EVENT_STA_START:
 	        esp_wifi_connect();
+	        ESP_LOGI(TAG,"WiFi connected");
 	        break;
 	    case SYSTEM_EVENT_STA_GOT_IP:
 	        xEventGroupSetBits(wifi_event_group, IPV4_GOTIP_BIT);
+	        ESP_LOGI(TAG,"WiFi got IP");
 	        break;
 	    case SYSTEM_EVENT_STA_DISCONNECTED:
 	        /* This is a workaround as ESP32 WiFi libs don't currently
@@ -413,3 +424,31 @@ static void initialise_wifi(void)
 mode_t check_mode(){
 	return RAW;
 }
+
+void create_socket(){
+	/*
+	static char tag[] = "Create socket";
+    ESP_LOGD(tag, "start");
+	socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+
+		ESP_LOGD(tag, "socket: rc: %d", sock);
+		struct sockaddr_in serverAddress;
+		serverAddress.sin_family = AF_INET;
+		inet_pton(AF_INET, "192.168.1.200", &serverAddress.sin_addr.s_addr);
+		serverAddress.sin_port = htons(9999);
+
+		int rc = connect(sock, (struct sockaddr *)&serverAddress, sizeof(struct sockaddr_in));
+		ESP_LOGD(tag, "connect rc: %d", rc);
+
+		char *data = "Hello world";
+		rc = send(sock, data, strlen(data), 0);
+		ESP_LOGD(tag, "send: rc: %d", rc);
+
+		rc = close(sock);
+		ESP_LOGD(tag, "close: rc: %d", rc);
+
+		vTaskDelete(NULL);
+ */
+
+}
+

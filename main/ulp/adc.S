@@ -161,7 +161,7 @@ measure:
    halt
 
 wake_up:
-   //READ_RTC_FIELD(RTC_CNTL_LOW_POWER_ST_REG, RTC_CNTL_RDY_FOR_WAKEUP)
+   //READ_RTC_FIELD(RTC_CNTL_LOW_POWER_ST_REG, RTC_CNTL_RDY_FOR_WAKEUP) - if we proceed without deep sleep here is a problem
    //AND r0, r0, 1
    //JUMP wake_up, eq    // Retry until the bit is set
    WAKE                          // Trigger wake up
