@@ -1,4 +1,4 @@
-cache_utils.o: /home/iho/esp/esp-idf/components/spi_flash/cache_utils.c \
+cache_utils.o: /home/iho/esp/esp-idf/components/spi_flash/./cache_utils.c \
  /home/iho/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /home/iho/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -46,6 +46,7 @@ cache_utils.o: /home/iho/esp/esp-idf/components/spi_flash/cache_utils.c \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -69,9 +70,7 @@ cache_utils.o: /home/iho/esp/esp-idf/components/spi_flash/cache_utils.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -87,7 +86,6 @@ cache_utils.o: /home/iho/esp/esp-idf/components/spi_flash/cache_utils.c \
  /home/iho/esp/esp-idf/components/esp32/include/rom/cache.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_dport_access.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_ipc.h \
@@ -189,6 +187,8 @@ cache_utils.o: /home/iho/esp/esp-idf/components/spi_flash/cache_utils.c \
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
 
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
@@ -235,11 +235,7 @@ cache_utils.o: /home/iho/esp/esp-idf/components/spi_flash/cache_utils.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
-
 /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
-
-/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -270,8 +266,6 @@ cache_utils.o: /home/iho/esp/esp-idf/components/spi_flash/cache_utils.c \
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_dport_access.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 

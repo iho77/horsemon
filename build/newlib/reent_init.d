@@ -1,4 +1,4 @@
-reent_init.o: /home/iho/esp/esp-idf/components/newlib/reent_init.c \
+reent_init.o: /home/iho/esp/esp-idf/components/newlib/./reent_init.c \
  /home/iho/esp/esp-idf/components/newlib/include/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/iho/esp/esp-idf/components/newlib/include/newlib.h \

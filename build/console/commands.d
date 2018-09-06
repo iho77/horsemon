@@ -1,4 +1,4 @@
-commands.o: /home/iho/esp/esp-idf/components/console/commands.c \
+commands.o: /home/iho/esp/esp-idf/components/console/./commands.c \
  /home/iho/esp/esp-idf/components/newlib/include/stdio.h \
  /home/iho/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/iho/esp/esp-idf/components/newlib/include/newlib.h \
@@ -36,11 +36,10 @@ commands.o: /home/iho/esp/esp-idf/components/console/commands.c \
  /home/iho/esp/esp-idf/components/newlib/platform_include/assert.h \
  /home/iho/esp/esp-idf/components/newlib/include/assert.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h \
- /home/iho/esp/esp-idf/components/console/esp_console.h \
+ /home/iho/esp/esp-idf/components/console/./esp_console.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_err.h \
- /home/iho/esp/esp-idf/components/console/linenoise/linenoise.h \
- /home/iho/esp/esp-idf/components/console/argtable3/argtable3.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/time.h \
+ /home/iho/esp/esp-idf/components/console/./linenoise/linenoise.h \
+ /home/iho/esp/esp-idf/components/console/./argtable3/argtable3.h \
  /home/iho/esp/esp-idf/components/newlib/include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/time.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/queue.h
@@ -119,15 +118,13 @@ commands.o: /home/iho/esp/esp-idf/components/console/commands.c \
 
 /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h:
 
-/home/iho/esp/esp-idf/components/console/esp_console.h:
+/home/iho/esp/esp-idf/components/console/./esp_console.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_err.h:
 
-/home/iho/esp/esp-idf/components/console/linenoise/linenoise.h:
+/home/iho/esp/esp-idf/components/console/./linenoise/linenoise.h:
 
-/home/iho/esp/esp-idf/components/console/argtable3/argtable3.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/time.h:
+/home/iho/esp/esp-idf/components/console/./argtable3/argtable3.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/time.h:
 

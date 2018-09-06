@@ -175,9 +175,10 @@ void app_main()
         		fflush(stdout);
         		start_ulp_program();
         	    ESP_ERROR_CHECK( esp_sleep_enable_ulp_wakeup() );
+        	    /* Outdated API from old sdk ???
         	    rtc_gpio_isolate(GPIO_NUM_4);
         	    rtc_gpio_isolate(GPIO_NUM_15);
-        	    rtc_gpio_isolate(GPIO_NUM_25);
+        	    rtc_gpio_isolate(GPIO_NUM_25);*/
         	    esp_deep_sleep_start();
         		break;
         }
@@ -245,12 +246,12 @@ esp_err_t data_op(opcode_t cmd){
 	// and allow format partition in case if it is new one and was not formated before
 	const esp_vfs_fat_mount_config_t mount_config = {
 	            .max_files = 4,
-	            .format_if_mount_failed = true,
-	            .allocation_unit_size = CONFIG_WL_SECTOR_SIZE
+	            .format_if_mount_failed = true
+	            //.allocation_unit_size = CONFIG_WL_SECTOR_SIZE  Outdated API????
 	    };
 	esp_err_t err = esp_vfs_fat_spiflash_mount(base_path, "storage", &mount_config, &s_wl_handle);
 	if (err != ESP_OK) {
-	        ESP_LOGE(TAG, "Failed to mount FATFS (%s)", esp_err_to_name(err));
+	        ESP_LOGE(TAG, "Failed to mount FATFS");
 	        return err;
 	   }
 

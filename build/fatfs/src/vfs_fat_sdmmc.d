@@ -29,12 +29,34 @@ src/vfs_fat_sdmmc.o: \
  /home/iho/esp/esp-idf/components/newlib/include/assert.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/iho/esp/esp-idf/components/vfs/include/esp_vfs.h \
- /home/iho/esp/esp-idf/components/newlib/include/unistd.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
- /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_err.h \
+ /home/iho/esp/esp-idf/components/newlib/include/stdio.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/types.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/sched.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h \
+ /home/iho/esp/esp-idf/components/newlib/include/time.h \
+ /home/iho/esp/esp-idf/components/newlib/include/machine/time.h \
+ /home/iho/esp/esp-idf/components/newlib/include/dirent.h \
+ /home/iho/esp/esp-idf/components/vfs/include/sys/dirent.h \
+ /home/iho/esp/esp-idf/components/fatfs/src/esp_vfs_fat.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/gpio.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_types.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
+ /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_types.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_host.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_types.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/sdspi_host.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/spi_master.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -51,34 +73,19 @@ src/vfs_fat_sdmmc.o: \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_timer.h \
- /home/iho/esp/esp-idf/components/newlib/include/stdio.h \
- /home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h \
- /home/iho/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/iho/esp/esp-idf/components/heap/include/esp_heap_caps.h \
  /home/iho/esp/esp-idf/components/heap/include/multi_heap.h \
  /home/iho/esp/esp-idf/components/soc/include/soc/soc_memory_layout.h \
- /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_system.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_sleep.h \
- /home/iho/esp/esp-idf/components/driver/include/driver/gpio.h \
- /home/iho/esp/esp-idf/components/esp32/include/esp_types.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
- /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
- /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -86,27 +93,10 @@ src/vfs_fat_sdmmc.o: \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h \
- /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/time.h \
- /home/iho/esp/esp-idf/components/newlib/include/time.h \
- /home/iho/esp/esp-idf/components/newlib/include/machine/time.h \
- /home/iho/esp/esp-idf/components/newlib/include/sys/time.h \
- /home/iho/esp/esp-idf/components/newlib/include/dirent.h \
- /home/iho/esp/esp-idf/components/vfs/include/sys/dirent.h \
- /home/iho/esp/esp-idf/components/fatfs/src/esp_vfs_fat.h \
- /home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_types.h \
- /home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_host.h \
- /home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_types.h \
- /home/iho/esp/esp-idf/components/driver/include/driver/sdspi_host.h \
- /home/iho/esp/esp-idf/components/driver/include/driver/spi_master.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/spi_common.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/lldesc.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/queue.h \
- /home/iho/esp/esp-idf/components/soc/include/soc/spi_periph.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/spi_pins.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/spi_reg.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
  /home/iho/esp/esp-idf/components/fatfs/src/ff.h \
  /home/iho/esp/esp-idf/components/fatfs/src/integer.h \
  /home/iho/esp/esp-idf/components/fatfs/src/ffconf.h \
@@ -117,7 +107,6 @@ src/vfs_fat_sdmmc.o: \
  /home/iho/esp/esp-idf/components/wear_levelling/include/wear_levelling.h \
  /home/iho/esp/esp-idf/components/spi_flash/include/esp_partition.h \
  /home/iho/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /home/iho/esp/esp-idf/components/fatfs/src/vfs_fat_internal.h \
  /home/iho/esp/esp-idf/components/sdmmc/include/sdmmc_cmd.h \
  /home/iho/esp/esp-idf/components/fatfs/src/diskio.h
 
@@ -179,17 +168,61 @@ src/vfs_fat_sdmmc.o: \
 
 /home/iho/esp/esp-idf/components/vfs/include/esp_vfs.h:
 
-/home/iho/esp/esp-idf/components/newlib/include/unistd.h:
+/home/iho/esp/esp-idf/components/esp32/include/esp_err.h:
 
-/home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h:
+/home/iho/esp/esp-idf/components/newlib/include/stdio.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/types.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/machine/types.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/sched.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/stat.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/time.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/machine/time.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/dirent.h:
+
+/home/iho/esp/esp-idf/components/vfs/include/sys/dirent.h:
+
+/home/iho/esp/esp-idf/components/fatfs/src/esp_vfs_fat.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/gpio.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_types.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_attr.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_types.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_host.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_types.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/sdspi_host.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/spi_master.h:
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -223,6 +256,8 @@ src/vfs_fat_sdmmc.o: \
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
 
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
@@ -233,19 +268,11 @@ src/vfs_fat_sdmmc.o: \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_timer.h:
 
-/home/iho/esp/esp-idf/components/newlib/include/stdio.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/esp_err.h:
-
 /home/iho/esp/esp-idf/components/heap/include/esp_heap_caps.h:
 
 /home/iho/esp/esp-idf/components/heap/include/multi_heap.h:
 
 /home/iho/esp/esp-idf/components/soc/include/soc/soc_memory_layout.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/esp_attr.h:
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
@@ -254,30 +281,6 @@ src/vfs_fat_sdmmc.o: \
 /home/iho/esp/esp-idf/components/esp32/include/esp_system.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_sleep.h:
-
-/home/iho/esp/esp-idf/components/driver/include/driver/gpio.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/esp_types.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
-
-/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -293,47 +296,13 @@ src/vfs_fat_sdmmc.o: \
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
-/home/iho/esp/esp-idf/components/newlib/include/sys/stat.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/time.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/time.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/machine/time.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/sys/time.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/dirent.h:
-
-/home/iho/esp/esp-idf/components/vfs/include/sys/dirent.h:
-
-/home/iho/esp/esp-idf/components/fatfs/src/esp_vfs_fat.h:
-
-/home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_types.h:
-
-/home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_host.h:
-
-/home/iho/esp/esp-idf/components/driver/include/driver/sdmmc_types.h:
-
-/home/iho/esp/esp-idf/components/driver/include/driver/sdspi_host.h:
-
-/home/iho/esp/esp-idf/components/driver/include/driver/spi_master.h:
-
 /home/iho/esp/esp-idf/components/driver/include/driver/spi_common.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/rom/lldesc.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/rom/queue.h:
-
-/home/iho/esp/esp-idf/components/soc/include/soc/spi_periph.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/spi_pins.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/spi_reg.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h:
 
 /home/iho/esp/esp-idf/components/fatfs/src/ff.h:
 
@@ -354,8 +323,6 @@ src/vfs_fat_sdmmc.o: \
 /home/iho/esp/esp-idf/components/spi_flash/include/esp_partition.h:
 
 /home/iho/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
-
-/home/iho/esp/esp-idf/components/fatfs/src/vfs_fat_internal.h:
 
 /home/iho/esp/esp-idf/components/sdmmc/include/sdmmc_cmd.h:
 

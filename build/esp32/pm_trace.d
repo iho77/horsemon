@@ -1,5 +1,5 @@
-pm_trace.o: /home/iho/esp/esp-idf/components/esp32/pm_trace.c \
- /home/iho/esp/esp-idf/components/esp32/pm_trace.h \
+pm_trace.o: /home/iho/esp/esp-idf/components/esp32/./pm_trace.c \
+ /home/iho/esp/esp-idf/components/esp32/./pm_trace.h \
  /home/iho/esp/hello_world/build/include/sdkconfig.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/gpio.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_err.h \
@@ -38,11 +38,9 @@ pm_trace.o: /home/iho/esp/esp-idf/components/esp32/pm_trace.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
- /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h
+ /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h
 
-/home/iho/esp/esp-idf/components/esp32/pm_trace.h:
+/home/iho/esp/esp-idf/components/esp32/./pm_trace.h:
 
 /home/iho/esp/hello_world/build/include/sdkconfig.h:
 
@@ -120,9 +118,5 @@ pm_trace.o: /home/iho/esp/esp-idf/components/esp32/pm_trace.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
-
 /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
-
-/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 /home/iho/esp/esp-idf/components/esp32/./pm_trace.c:

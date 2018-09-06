@@ -1,6 +1,5 @@
 libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/scrypt_platform.o: \
  /home/iho/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/scrypt_platform.c \
- /home/iho/esp/esp-idf/components/newlib/platform_include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/reent.h \
@@ -25,8 +24,6 @@ libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/scrypt_platform.o: \
  /home/iho/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/iho/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/runtime.h \
  /home/iho/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/errno.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/errno.h:
 

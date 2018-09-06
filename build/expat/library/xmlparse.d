@@ -27,7 +27,6 @@ library/xmlparse.o: \
  /home/iho/esp/esp-idf/components/newlib/include/machine/types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/sched.h \
  /home/iho/esp/esp-idf/components/newlib/include/unistd.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/expat/include/expat/expat_config.h \
  /home/iho/esp/esp-idf/components/expat/include/expat/ascii.h \
@@ -91,8 +90,6 @@ library/xmlparse.o: \
 /home/iho/esp/esp-idf/components/newlib/include/sys/sched.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/unistd.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h:
 

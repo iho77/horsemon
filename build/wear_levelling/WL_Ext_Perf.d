@@ -1,5 +1,5 @@
 WL_Ext_Perf.o: \
- /home/iho/esp/esp-idf/components/wear_levelling/WL_Ext_Perf.cpp \
+ /home/iho/esp/esp-idf/components/wear_levelling/./WL_Ext_Perf.cpp \
  /home/iho/esp/esp-idf/components/wear_levelling/private_include/WL_Ext_Perf.h \
  /home/iho/esp/esp-idf/components/wear_levelling/private_include/WL_Flash.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_err.h \

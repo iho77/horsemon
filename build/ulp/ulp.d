@@ -1,4 +1,4 @@
-ulp.o: /home/iho/esp/esp-idf/components/ulp/ulp.c \
+ulp.o: /home/iho/esp/esp-idf/components/ulp/./ulp.c \
  /home/iho/esp/esp-idf/components/newlib/include/stdio.h \
  /home/iho/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/iho/esp/esp-idf/components/newlib/include/newlib.h \

@@ -15,7 +15,6 @@ libsodium/src/libsodium/sodium/core.o: \
  /home/iho/esp/esp-idf/components/newlib/include/sys/lock.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/string.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/types.h \
@@ -74,8 +73,6 @@ libsodium/src/libsodium/sodium/core.o: \
 /home/iho/esp/esp-idf/components/newlib/include/sys/cdefs.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/string.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/time.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/time.h:
 

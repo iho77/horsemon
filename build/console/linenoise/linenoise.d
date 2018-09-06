@@ -1,7 +1,6 @@
 linenoise/linenoise.o: \
  /home/iho/esp/esp-idf/components/console/linenoise/linenoise.c \
  /home/iho/esp/esp-idf/components/newlib/include/unistd.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/iho/esp/esp-idf/components/newlib/include/newlib.h \
@@ -24,14 +23,12 @@ linenoise/linenoise.o: \
  /home/iho/esp/esp-idf/components/newlib/include/alloca.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdio.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/ctype.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/fcntl.h \
@@ -39,8 +36,6 @@ linenoise/linenoise.o: \
  /home/iho/esp/esp-idf/components/console/linenoise/linenoise.h
 
 /home/iho/esp/esp-idf/components/newlib/include/unistd.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h:
 
@@ -86,8 +81,6 @@ linenoise/linenoise.o: \
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
-/home/iho/esp/esp-idf/components/newlib/platform_include/errno.h:
-
 /home/iho/esp/esp-idf/components/newlib/include/errno.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h:
@@ -99,8 +92,6 @@ linenoise/linenoise.o: \
 /home/iho/esp/esp-idf/components/newlib/include/ctype.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/time.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/time.h:
 

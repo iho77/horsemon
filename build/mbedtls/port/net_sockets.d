@@ -2,12 +2,11 @@ port/net_sockets.o: \
  /home/iho/esp/esp-idf/components/mbedtls/port/net_sockets.c \
  /home/iho/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
  /home/iho/esp/hello_world/build/include/sdkconfig.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
  /home/iho/esp/esp-idf/components/newlib/include/limits.h \
  /home/iho/esp/esp-idf/components/newlib/include/newlib.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/time.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/platform_time.h \
  /home/iho/esp/esp-idf/components/newlib/include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/config.h \
@@ -30,24 +29,24 @@ port/net_sockets.o: \
  /home/iho/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/iho/esp/esp-idf/components/newlib/include/alloca.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/net_sockets.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/net_sockets.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/bignum.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ciphersuites.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/dhm.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdh.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ecp.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ssl_ciphersuites.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/pk.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/md.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ecdsa.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/cipher.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crt.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/x509.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/asn1.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crl.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/dhm.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ecdh.h \
  /home/iho/esp/esp-idf/components/newlib/include/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/posix/sys/socket.h \
@@ -55,14 +54,12 @@ port/net_sockets.o: \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
  /home/iho/esp/esp-idf/components/newlib/include/unistd.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/fcntl.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h \
  /home/iho/esp/esp-idf/components/vfs/include/sys/ioctl.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_task.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_system.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_err.h \
@@ -80,9 +77,7 @@ port/net_sockets.o: \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -101,7 +96,6 @@ port/net_sockets.o: \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/debug.h \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/arch.h \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
@@ -113,6 +107,7 @@ port/net_sockets.o: \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -142,17 +137,15 @@ port/net_sockets.o: \
 
 /home/iho/esp/hello_world/build/include/sdkconfig.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/limits.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/newlib.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/time.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/platform_time.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/time.h:
 
@@ -198,41 +191,41 @@ port/net_sockets.o: \
 
 /home/iho/esp/esp-idf/components/newlib/include/alloca.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/net_sockets.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/net_sockets.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/bignum.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/stdint.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ecp.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ciphersuites.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ssl_ciphersuites.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/pk.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/md.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ecdsa.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/cipher.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crt.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/x509.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/asn1.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crl.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/dhm.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/dhm.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdh.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ecdh.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/string.h:
 
@@ -248,8 +241,6 @@ port/net_sockets.o: \
 
 /home/iho/esp/esp-idf/components/newlib/include/unistd.h:
 
-/home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
-
 /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/time.h:
@@ -261,8 +252,6 @@ port/net_sockets.o: \
 /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h:
 
 /home/iho/esp/esp-idf/components/vfs/include/sys/ioctl.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/sys/select.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_task.h:
 
@@ -298,11 +287,7 @@ port/net_sockets.o: \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
-
 /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
-
-/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -340,8 +325,6 @@ port/net_sockets.o: \
 
 /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h:
 
-/home/iho/esp/esp-idf/components/newlib/platform_include/errno.h:
-
 /home/iho/esp/esp-idf/components/newlib/include/errno.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h:
@@ -363,6 +346,8 @@ port/net_sockets.o: \
 /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 

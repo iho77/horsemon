@@ -1,4 +1,4 @@
-crosscore_int.o: /home/iho/esp/esp-idf/components/esp32/crosscore_int.c \
+crosscore_int.o: /home/iho/esp/esp-idf/components/esp32/./crosscore_int.c \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -54,10 +54,6 @@ crosscore_int.o: /home/iho/esp/esp-idf/components/esp32/crosscore_int.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_dport_access.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -67,6 +63,10 @@ crosscore_int.o: /home/iho/esp/esp-idf/components/esp32/crosscore_int.c \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_timer.h \
  /home/iho/esp/esp-idf/components/heap/include/esp_heap_caps.h \
@@ -82,8 +82,6 @@ crosscore_int.o: /home/iho/esp/esp-idf/components/esp32/crosscore_int.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
- /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/task.h \
@@ -204,14 +202,6 @@ crosscore_int.o: /home/iho/esp/esp-idf/components/esp32/crosscore_int.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_dport_access.h:
 
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
-
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
@@ -229,6 +219,14 @@ crosscore_int.o: /home/iho/esp/esp-idf/components/esp32/crosscore_int.c \
 /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
@@ -259,10 +257,6 @@ crosscore_int.o: /home/iho/esp/esp-idf/components/esp32/crosscore_int.c \
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
-
-/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 

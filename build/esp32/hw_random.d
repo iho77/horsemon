@@ -1,4 +1,4 @@
-hw_random.o: /home/iho/esp/esp-idf/components/esp32/hw_random.c \
+hw_random.o: /home/iho/esp/esp-idf/components/esp32/./hw_random.c \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/features.h \

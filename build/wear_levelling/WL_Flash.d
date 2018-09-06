@@ -1,4 +1,5 @@
-WL_Flash.o: /home/iho/esp/esp-idf/components/wear_levelling/WL_Flash.cpp \
+WL_Flash.o: \
+ /home/iho/esp/esp-idf/components/wear_levelling/./WL_Flash.cpp \
  /home/iho/esp/esp-idf/components/newlib/include/stdio.h \
  /home/iho/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/iho/esp/esp-idf/components/newlib/include/newlib.h \
@@ -35,7 +36,7 @@ WL_Flash.o: /home/iho/esp/esp-idf/components/wear_levelling/WL_Flash.cpp \
  /home/iho/esp/esp-idf/components/wear_levelling/private_include/Flash_Access.h \
  /home/iho/esp/esp-idf/components/wear_levelling/private_include/WL_Config.h \
  /home/iho/esp/esp-idf/components/wear_levelling/private_include/WL_State.h \
- /home/iho/esp/esp-idf/components/wear_levelling/crc32.h \
+ /home/iho/esp/esp-idf/components/wear_levelling/./crc32.h \
  /home/iho/esp/esp-idf/components/newlib/include/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/string.h
 
@@ -111,7 +112,7 @@ WL_Flash.o: /home/iho/esp/esp-idf/components/wear_levelling/WL_Flash.cpp \
 
 /home/iho/esp/esp-idf/components/wear_levelling/private_include/WL_State.h:
 
-/home/iho/esp/esp-idf/components/wear_levelling/crc32.h:
+/home/iho/esp/esp-idf/components/wear_levelling/./crc32.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/string.h:
 

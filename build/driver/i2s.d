@@ -1,4 +1,4 @@
-i2s.o: /home/iho/esp/esp-idf/components/driver/i2s.c \
+i2s.o: /home/iho/esp/esp-idf/components/driver/./i2s.c \
  /home/iho/esp/esp-idf/components/newlib/include/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/iho/esp/esp-idf/components/newlib/include/newlib.h \
@@ -43,6 +43,7 @@ i2s.o: /home/iho/esp/esp-idf/components/driver/i2s.c \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -70,9 +71,7 @@ i2s.o: /home/iho/esp/esp-idf/components/driver/i2s.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -82,7 +81,6 @@ i2s.o: /home/iho/esp/esp-idf/components/driver/i2s.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_dport_access.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/sens_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc.h \
@@ -93,17 +91,15 @@ i2s.o: /home/iho/esp/esp-idf/components/driver/i2s.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/i2s_struct.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/i2s_reg.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/adc.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/rtc_io.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_gpio_channel.h \
- /home/iho/esp/esp-idf/components/soc/include/soc/rtc_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/dac.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dac_channel.h \
- /home/iho/esp/esp-idf/components/driver/adc1_i2s_private.h \
+ /home/iho/esp/esp-idf/components/driver/./adc1_i2s_private.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h
 
@@ -195,6 +191,8 @@ i2s.o: /home/iho/esp/esp-idf/components/driver/i2s.c \
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
 
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
@@ -249,11 +247,7 @@ i2s.o: /home/iho/esp/esp-idf/components/driver/i2s.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
-
 /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
-
-/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -272,8 +266,6 @@ i2s.o: /home/iho/esp/esp-idf/components/driver/i2s.c \
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_dport_access.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
 
@@ -295,8 +287,6 @@ i2s.o: /home/iho/esp/esp-idf/components/driver/i2s.c \
 
 /home/iho/esp/esp-idf/components/driver/include/driver/periph_ctrl.h:
 
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
-
 /home/iho/esp/esp-idf/components/driver/include/driver/adc.h:
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h:
@@ -309,13 +299,11 @@ i2s.o: /home/iho/esp/esp-idf/components/driver/i2s.c \
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_gpio_channel.h:
 
-/home/iho/esp/esp-idf/components/soc/include/soc/rtc_periph.h:
-
 /home/iho/esp/esp-idf/components/driver/include/driver/dac.h:
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dac_channel.h:
 
-/home/iho/esp/esp-idf/components/driver/adc1_i2s_private.h:
+/home/iho/esp/esp-idf/components/driver/./adc1_i2s_private.h:
 
 /home/iho/esp/esp-idf/components/log/include/esp_log.h:
 

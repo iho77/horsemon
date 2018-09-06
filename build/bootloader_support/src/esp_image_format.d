@@ -49,9 +49,9 @@ src/esp_image_format.o: \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/iho/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h \
- /home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_random.h \
- /home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_sha.h
+ /home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h \
+ /home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_random.h \
+ /home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_sha.h
 
 /home/iho/esp/esp-idf/components/newlib/include/string.h:
 
@@ -151,9 +151,9 @@ src/esp_image_format.o: \
 
 /home/iho/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
-/home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h:
+/home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h:
 
-/home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_random.h:
+/home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_random.h:
 
-/home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_sha.h:
+/home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_sha.h:
 /home/iho/esp/esp-idf/components/bootloader_support/src/esp_image_format.c:

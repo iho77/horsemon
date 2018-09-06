@@ -1,6 +1,6 @@
 src/bootloader_sha.o: \
  /home/iho/esp/esp-idf/components/bootloader_support/src/bootloader_sha.c \
- /home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_sha.h \
+ /home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_sha.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -28,12 +28,12 @@ src/bootloader_sha.o: \
  /home/iho/esp/esp-idf/components/newlib/include/sys/syslimits.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/endian.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/param.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/sha256.h \
  /home/iho/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
+ /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
  /home/iho/esp/esp-idf/components/newlib/include/limits.h
 
-/home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_sha.h:
+/home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_sha.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/stdint.h:
 
@@ -89,11 +89,11 @@ src/bootloader_sha.o: \
 
 /home/iho/esp/esp-idf/components/newlib/include/machine/param.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/sha256.h:
 
 /home/iho/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
+/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/limits.h:
 /home/iho/esp/esp-idf/components/bootloader_support/src/bootloader_sha.c:

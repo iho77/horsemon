@@ -1,10 +1,10 @@
 src/secure_boot_signatures.o: \
  /home/iho/esp/esp-idf/components/bootloader_support/src/secure_boot_signatures.c \
  /home/iho/esp/hello_world/build/bootloader/../include/sdkconfig.h \
- /home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h \
+ /home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/iho/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_sha.h \
+ /home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_sha.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
@@ -21,13 +21,13 @@ src/secure_boot_signatures.o: \
 
 /home/iho/esp/hello_world/build/bootloader/../include/sdkconfig.h:
 
-/home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h:
+/home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_err.h:
 
 /home/iho/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
-/home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_sha.h:
+/home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_sha.h:
 
 /home/iho/esp/esp-idf/components/log/include/esp_log.h:
 

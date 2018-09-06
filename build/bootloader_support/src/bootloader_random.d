@@ -1,6 +1,6 @@
 src/bootloader_random.o: \
  /home/iho/esp/esp-idf/components/bootloader_support/src/bootloader_random.c \
- /home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_random.h \
+ /home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_random.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/cpu.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -34,16 +34,6 @@ src/bootloader_random.o: \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_dport_access.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/hal.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/tie.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/i2s_reg.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -65,18 +55,22 @@ src/bootloader_random.o: \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/tie.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/system.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h
 
-/home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_random.h:
+/home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_random.h:
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/cpu.h:
 
@@ -144,26 +138,6 @@ src/bootloader_random.o: \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_dport_access.h:
 
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/hal.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/config/tie.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h:
-
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/i2s_reg.h:
 
 /home/iho/esp/esp-idf/components/log/include/esp_log.h:
@@ -206,11 +180,7 @@ src/bootloader_random.o: \
 
 /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
-
 /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
-
-/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -220,9 +190,21 @@ src/bootloader_random.o: \
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h:
 
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/hal.h:
+
 /home/iho/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h:
 
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/config/tie.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/system.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h:
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
 /home/iho/esp/esp-idf/components/bootloader_support/src/bootloader_random.c:

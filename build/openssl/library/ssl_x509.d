@@ -42,10 +42,7 @@ library/ssl_x509.o: \
  /home/iho/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/malloc.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/malloc.h \
- /home/iho/esp/esp-idf/components/openssl/include/platform/ssl_port.h \
- /home/iho/esp/esp-idf/components/openssl/include/openssl/ssl.h \
- /home/iho/esp/esp-idf/components/openssl/include/internal/ssl_x509.h \
- /home/iho/esp/esp-idf/components/openssl/include/internal/ssl_pkey.h
+ /home/iho/esp/esp-idf/components/openssl/include/platform/ssl_port.h
 
 /home/iho/esp/esp-idf/components/openssl/include/internal/ssl_x509.h:
 
@@ -132,10 +129,4 @@ library/ssl_x509.o: \
 /home/iho/esp/esp-idf/components/newlib/include/machine/malloc.h:
 
 /home/iho/esp/esp-idf/components/openssl/include/platform/ssl_port.h:
-
-/home/iho/esp/esp-idf/components/openssl/include/openssl/ssl.h:
-
-/home/iho/esp/esp-idf/components/openssl/include/internal/ssl_x509.h:
-
-/home/iho/esp/esp-idf/components/openssl/include/internal/ssl_pkey.h:
 /home/iho/esp/esp-idf/components/openssl/library/ssl_x509.c:

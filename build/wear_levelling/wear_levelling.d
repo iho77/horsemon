@@ -1,5 +1,5 @@
 wear_levelling.o: \
- /home/iho/esp/esp-idf/components/wear_levelling/wear_levelling.cpp \
+ /home/iho/esp/esp-idf/components/wear_levelling/./wear_levelling.cpp \
  /home/iho/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /home/iho/esp/esp-idf/components/newlib/include/_ansi.h \

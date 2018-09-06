@@ -1,5 +1,5 @@
 xtensa_intr_asm.o: \
- /home/iho/esp/esp-idf/components/freertos/xtensa_intr_asm.S \
+ /home/iho/esp/esp-idf/components/freertos/./xtensa_intr_asm.S \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h \

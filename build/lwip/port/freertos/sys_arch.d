@@ -1,26 +1,22 @@
 port/freertos/sys_arch.o: \
  /home/iho/esp/esp-idf/components/lwip/port/freertos/sys_arch.c \
- /home/iho/esp/esp-idf/components/newlib/platform_include/pthread.h \
- /home/iho/esp/esp-idf/components/newlib/include/sys/types.h \
+ /home/iho/esp/esp-idf/components/newlib/include/pthread.h \
+ /home/iho/esp/esp-idf/components/newlib/include/unistd.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/iho/esp/esp-idf/components/newlib/include/newlib.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/config.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/features.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h \
- /home/iho/esp/esp-idf/components/newlib/include/machine/_types.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/types.h \
+ /home/iho/esp/esp-idf/components/newlib/include/machine/_types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/_types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/lock.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/sched.h \
- /home/iho/esp/esp-idf/components/newlib/include/sys/time.h \
- /home/iho/esp/esp-idf/components/newlib/include/pthread.h \
- /home/iho/esp/esp-idf/components/newlib/include/unistd.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
- /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h \
- /home/iho/esp/esp-idf/components/newlib/include/sys/cdefs.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/reent.h \
@@ -30,7 +26,6 @@ port/freertos/sys_arch.o: \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h \
  /home/iho/esp/esp-idf/components/newlib/platform_include/assert.h \
@@ -61,6 +56,7 @@ port/freertos/sys_arch.o: \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -84,9 +80,7 @@ port/freertos/sys_arch.o: \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -101,11 +95,11 @@ port/freertos/sys_arch.o: \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/vfs_lwip.h \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/fcntl.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h \
  /home/iho/esp/esp-idf/components/vfs/include/sys/ioctl.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_task.h \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/def.h \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h \
@@ -118,9 +112,11 @@ port/freertos/sys_arch.o: \
  /home/iho/esp/esp-idf/components/log/include/esp_log.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h
 
-/home/iho/esp/esp-idf/components/newlib/platform_include/pthread.h:
+/home/iho/esp/esp-idf/components/newlib/include/pthread.h:
 
-/home/iho/esp/esp-idf/components/newlib/include/sys/types.h:
+/home/iho/esp/esp-idf/components/newlib/include/unistd.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/_ansi.h:
 
@@ -134,9 +130,13 @@ port/freertos/sys_arch.o: \
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h:
 
-/home/iho/esp/esp-idf/components/newlib/include/machine/_types.h:
+/home/iho/esp/esp-idf/components/newlib/include/sys/cdefs.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/types.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/machine/_types.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/_types.h:
 
@@ -145,20 +145,6 @@ port/freertos/sys_arch.o: \
 /home/iho/esp/esp-idf/components/newlib/include/machine/types.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/sched.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/sys/time.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/pthread.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/unistd.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h:
-
-/home/iho/esp/esp-idf/components/newlib/include/sys/cdefs.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/time.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/time.h:
 
@@ -177,8 +163,6 @@ port/freertos/sys_arch.o: \
 /home/iho/esp/esp-idf/components/newlib/include/stdint.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/_intsup.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/errno.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/errno.h:
 
@@ -240,6 +224,8 @@ port/freertos/sys_arch.o: \
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
 
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
@@ -286,11 +272,7 @@ port/freertos/sys_arch.o: \
 
 /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
-
 /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
-
-/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -320,6 +302,8 @@ port/freertos/sys_arch.o: \
 
 /home/iho/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h:
 
+/home/iho/esp/esp-idf/components/newlib/include/sys/time.h:
+
 /home/iho/esp/esp-idf/components/newlib/include/sys/fcntl.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h:
@@ -327,8 +311,6 @@ port/freertos/sys_arch.o: \
 /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h:
 
 /home/iho/esp/esp-idf/components/vfs/include/sys/ioctl.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/sys/select.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_task.h:
 

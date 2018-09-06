@@ -1,4 +1,4 @@
-clk.o: /home/iho/esp/esp-idf/components/esp32/clk.c \
+clk.o: /home/iho/esp/esp-idf/components/esp32/./clk.c \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -35,7 +35,7 @@ clk.o: /home/iho/esp/esp-idf/components/esp32/clk.c \
  /home/iho/esp/esp-idf/components/newlib/include/assert.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_clk.h \
- /home/iho/esp/esp-idf/components/esp32/esp_clk_internal.h \
+ /home/iho/esp/esp-idf/components/esp32/./esp_clk_internal.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/uart.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_types.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -52,19 +52,12 @@ clk.o: /home/iho/esp/esp-idf/components/esp32/clk.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_dport_access.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/core-macros.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/tie.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/core-macros.h \
  /home/iho/esp/esp-idf/components/bootloader_support/include/bootloader_clock.h
 
 /home/iho/esp/esp-idf/components/newlib/include/stdint.h:
@@ -139,7 +132,7 @@ clk.o: /home/iho/esp/esp-idf/components/esp32/clk.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_clk.h:
 
-/home/iho/esp/esp-idf/components/esp32/esp_clk_internal.h:
+/home/iho/esp/esp-idf/components/esp32/./esp_clk_internal.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/rom/uart.h:
 
@@ -173,9 +166,7 @@ clk.o: /home/iho/esp/esp-idf/components/esp32/clk.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_dport_access.h:
 
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/core-macros.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core.h:
 
@@ -186,18 +177,6 @@ clk.o: /home/iho/esp/esp-idf/components/esp32/clk.c \
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/tie.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/corebits.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/core-macros.h:
 
 /home/iho/esp/esp-idf/components/bootloader_support/include/bootloader_clock.h:
 /home/iho/esp/esp-idf/components/esp32/./clk.c:

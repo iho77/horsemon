@@ -1,4 +1,4 @@
-wifi_init.o: /home/iho/esp/esp-idf/components/esp32/wifi_init.c \
+wifi_init.o: /home/iho/esp/esp-idf/components/esp32/./wifi_init.c \
  /home/iho/esp/esp-idf/components/esp32/include/esp_event.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -36,18 +36,15 @@ wifi_init.o: /home/iho/esp/esp-idf/components/esp32/wifi_init.c \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/unistd.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/fcntl.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h \
  /home/iho/esp/esp-idf/components/vfs/include/sys/ioctl.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_task.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_system.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_sleep.h \
@@ -62,9 +59,7 @@ wifi_init.o: /home/iho/esp/esp-idf/components/esp32/wifi_init.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -83,7 +78,6 @@ wifi_init.o: /home/iho/esp/esp-idf/components/esp32/wifi_init.c \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/debug.h \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/arch.h \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h \
- /home/iho/esp/esp-idf/components/newlib/platform_include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h \
  /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
@@ -95,6 +89,7 @@ wifi_init.o: /home/iho/esp/esp-idf/components/esp32/wifi_init.c \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -119,17 +114,12 @@ wifi_init.o: /home/iho/esp/esp-idf/components/esp32/wifi_init.c \
  /home/iho/esp/esp-idf/components/esp32/include/esp_wifi.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_wifi_crypto_types.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_event.h \
- /home/iho/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_wifi_internal.h \
- /home/iho/esp/esp-idf/components/esp32/include/esp_wifi.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_pm.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp32/pm.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc.h \
- /home/iho/esp/esp-idf/components/esp32/include/esp_mesh.h \
- /home/iho/esp/esp-idf/components/esp32/include/esp_mesh_internal.h \
- /home/iho/esp/esp-idf/components/esp32/include/esp_wifi_internal.h
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc.h
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_event.h:
 
@@ -205,15 +195,11 @@ wifi_init.o: /home/iho/esp/esp-idf/components/esp32/wifi_init.c \
 
 /home/iho/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h:
 
-/home/iho/esp/esp-idf/components/newlib/platform_include/time.h:
-
 /home/iho/esp/esp-idf/components/newlib/include/time.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/machine/time.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/unistd.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h:
 
@@ -226,8 +212,6 @@ wifi_init.o: /home/iho/esp/esp-idf/components/esp32/wifi_init.c \
 /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h:
 
 /home/iho/esp/esp-idf/components/vfs/include/sys/ioctl.h:
-
-/home/iho/esp/esp-idf/components/newlib/platform_include/sys/select.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_task.h:
 
@@ -257,11 +241,7 @@ wifi_init.o: /home/iho/esp/esp-idf/components/esp32/wifi_init.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h:
 
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
-
 /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
-
-/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -299,8 +279,6 @@ wifi_init.o: /home/iho/esp/esp-idf/components/esp32/wifi_init.c \
 
 /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h:
 
-/home/iho/esp/esp-idf/components/newlib/platform_include/errno.h:
-
 /home/iho/esp/esp-idf/components/newlib/include/errno.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h:
@@ -322,6 +300,8 @@ wifi_init.o: /home/iho/esp/esp-idf/components/esp32/wifi_init.c \
 /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
@@ -371,25 +351,15 @@ wifi_init.o: /home/iho/esp/esp-idf/components/esp32/wifi_init.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_event.h:
 
-/home/iho/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h:
-
 /home/iho/esp/esp-idf/components/log/include/esp_log.h:
 
 /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_wifi_internal.h:
 
-/home/iho/esp/esp-idf/components/esp32/include/esp_wifi.h:
-
 /home/iho/esp/esp-idf/components/esp32/include/esp_pm.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp32/pm.h:
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/esp_mesh.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/esp_mesh_internal.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/esp_wifi_internal.h:
 /home/iho/esp/esp-idf/components/esp32/./wifi_init.c:
