@@ -18,7 +18,7 @@
 #define BATCH_SIZE NUM_OF_WINDOWS*NO_OF_SAMPLES
 
 #define EXAMPLE_WIFI_SSID "iho"
-#define EXAMPLE_WIFI_PASS "pkjgjk_wifi"
+#define EXAMPLE_WIFI_PASS "******"
 
 #define UDP_PORT CONFIG_EXAMPLE_PORT
 
