@@ -1,4 +1,4 @@
-brownout.o: /home/iho/esp/esp-idf/components/esp32/./brownout.c \
+brownout.o: /home/iho/esp/esp-idf/components/esp32/brownout.c \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -32,6 +32,7 @@ brownout.o: /home/iho/esp/esp-idf/components/esp32/./brownout.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
+ /home/iho/esp/esp-idf/components/esp32/esp_system_internal.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_system.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_sleep.h \
@@ -44,7 +45,9 @@ brownout.o: /home/iho/esp/esp-idf/components/esp32/./brownout.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -66,7 +69,6 @@ brownout.o: /home/iho/esp/esp-idf/components/esp32/./brownout.c \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -144,6 +146,8 @@ brownout.o: /home/iho/esp/esp-idf/components/esp32/./brownout.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
+/home/iho/esp/esp-idf/components/esp32/esp_system_internal.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/esp_system.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_err.h:
@@ -168,7 +172,11 @@ brownout.o: /home/iho/esp/esp-idf/components/esp32/./brownout.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h:
 
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -211,8 +219,6 @@ brownout.o: /home/iho/esp/esp-idf/components/esp32/./brownout.c \
 /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 

@@ -28,6 +28,7 @@ spiffs/src/spiffs_nucleus.o: \
  /home/iho/esp/esp-idf/components/newlib/include/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/unistd.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h \
  /home/iho/esp/hello_world/build/include/sdkconfig.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log.h \
@@ -94,6 +95,8 @@ spiffs/src/spiffs_nucleus.o: \
 /home/iho/esp/esp-idf/components/newlib/include/sys/string.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/unistd.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h:
 

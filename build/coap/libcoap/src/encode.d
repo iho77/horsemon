@@ -20,22 +20,25 @@ libcoap/src/encode.o: \
  /home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/iho/esp/esp-idf/components/coap/port/include/coap_config.h \
  /home/iho/esp/esp-idf/components/coap/port/include/coap_config_posix.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/posix/sys/socket.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
+ /home/iho/esp/esp-idf/components/lwip/port/esp32/include/sys/socket.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/opt.h \
+ /home/iho/esp/esp-idf/components/lwip/port/esp32/include/lwipopts.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/iho/esp/esp-idf/components/newlib/include/alloca.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/unistd.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/fcntl.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h \
  /home/iho/esp/esp-idf/components/vfs/include/sys/ioctl.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_task.h \
  /home/iho/esp/hello_world/build/include/sdkconfig.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_system.h \
@@ -56,7 +59,9 @@ libcoap/src/encode.o: \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -72,12 +77,13 @@ libcoap/src/encode.o: \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/debug.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/arch.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h \
+ /home/iho/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
+ /home/iho/esp/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -86,7 +92,6 @@ libcoap/src/encode.o: \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -103,13 +108,16 @@ libcoap/src/encode.o: \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/vfs_lwip.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/def.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h \
+ /home/iho/esp/esp-idf/components/lwip/port/esp32/include/arch/vfs_lwip.h \
+ /home/iho/esp/esp-idf/components/newlib/include/inttypes.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/def.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip4_addr.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip6_addr.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/def.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/err.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/inet.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/errno.h \
  /home/iho/esp/esp-idf/components/coap/libcoap/include/coap/encode.h \
  /home/iho/esp/esp-idf/components/newlib/include/strings.h
 
@@ -153,13 +161,13 @@ libcoap/src/encode.o: \
 
 /home/iho/esp/esp-idf/components/coap/port/include/coap_config_posix.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/posix/sys/socket.h:
+/home/iho/esp/esp-idf/components/lwip/port/esp32/include/sys/socket.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/sockets.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h:
+/home/iho/esp/esp-idf/components/lwip/port/esp32/include/lwipopts.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/stdlib.h:
 
@@ -167,11 +175,15 @@ libcoap/src/encode.o: \
 
 /home/iho/esp/esp-idf/components/newlib/include/alloca.h:
 
+/home/iho/esp/esp-idf/components/newlib/platform_include/time.h:
+
 /home/iho/esp/esp-idf/components/newlib/include/time.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/machine/time.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/unistd.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h:
 
@@ -184,6 +196,8 @@ libcoap/src/encode.o: \
 /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h:
 
 /home/iho/esp/esp-idf/components/vfs/include/sys/ioctl.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/sys/select.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_task.h:
 
@@ -225,7 +239,11 @@ libcoap/src/encode.o: \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h:
 
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -257,17 +275,19 @@ libcoap/src/encode.o: \
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/debug.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/arch.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h:
+/home/iho/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/errno.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/errno.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h:
+/home/iho/esp/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h:
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -284,8 +304,6 @@ libcoap/src/encode.o: \
 /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
@@ -319,19 +337,25 @@ libcoap/src/encode.o: \
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/vfs_lwip.h:
+/home/iho/esp/esp-idf/components/lwip/port/esp32/include/arch/vfs_lwip.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h:
+/home/iho/esp/esp-idf/components/newlib/include/inttypes.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/def.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/def.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip4_addr.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/err.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip6_addr.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/def.h:
+
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/err.h:
+
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/inet.h:
+
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/errno.h:
 
 /home/iho/esp/esp-idf/components/coap/libcoap/include/coap/encode.h:
 

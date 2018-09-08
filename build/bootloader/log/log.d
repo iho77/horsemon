@@ -1,4 +1,4 @@
-log.o: /home/iho/esp/esp-idf/components/log/./log.c \
+log.o: /home/iho/esp/esp-idf/components/log/log.c \
  /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/soc.h \

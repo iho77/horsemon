@@ -1,5 +1,4 @@
-WL_Flash.o: \
- /home/iho/esp/esp-idf/components/wear_levelling/./WL_Flash.cpp \
+WL_Flash.o: /home/iho/esp/esp-idf/components/wear_levelling/WL_Flash.cpp \
  /home/iho/esp/esp-idf/components/newlib/include/stdio.h \
  /home/iho/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/iho/esp/esp-idf/components/newlib/include/newlib.h \
@@ -18,25 +17,54 @@ WL_Flash.o: \
  /home/iho/esp/esp-idf/components/newlib/include/machine/types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/sched.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h \
- /home/iho/esp/esp-idf/components/log/include/esp_log.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_system.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /home/iho/esp/hello_world/build/include/sdkconfig.h \
- /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
- /home/iho/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/iho/esp/esp-idf/components/esp32/include/esp_assert.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/iho/esp/esp-idf/components/newlib/platform_include/assert.h \
+ /home/iho/esp/hello_world/build/include/sdkconfig.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdlib.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/iho/esp/esp-idf/components/newlib/include/alloca.h \
  /home/iho/esp/esp-idf/components/newlib/include/assert.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_sleep.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/gpio.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_types.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_assert.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
+ /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
+ /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
+ /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/iho/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/hal.h \
+ /home/iho/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/tie.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/system.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h \
+ /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
+ /home/iho/esp/esp-idf/components/log/include/esp_log.h \
+ /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/iho/esp/esp-idf/components/wear_levelling/private_include/WL_Flash.h \
- /home/iho/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/iho/esp/esp-idf/components/wear_levelling/private_include/Flash_Access.h \
  /home/iho/esp/esp-idf/components/wear_levelling/private_include/WL_Config.h \
  /home/iho/esp/esp-idf/components/wear_levelling/private_include/WL_State.h \
- /home/iho/esp/esp-idf/components/wear_levelling/./crc32.h \
+ /home/iho/esp/esp-idf/components/wear_levelling/crc32.h \
  /home/iho/esp/esp-idf/components/newlib/include/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/string.h
 
@@ -76,21 +104,17 @@ WL_Flash.o: \
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
-/home/iho/esp/esp-idf/components/log/include/esp_log.h:
+/home/iho/esp/esp-idf/components/esp32/include/esp_system.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/stdint.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/home/iho/esp/hello_world/build/include/sdkconfig.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
-
-/home/iho/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/esp_assert.h:
+/home/iho/esp/esp-idf/components/esp32/include/esp_err.h:
 
 /home/iho/esp/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/iho/esp/hello_world/build/include/sdkconfig.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/stdlib.h:
 
@@ -100,11 +124,73 @@ WL_Flash.o: \
 
 /home/iho/esp/esp-idf/components/newlib/include/assert.h:
 
+/home/iho/esp/esp-idf/components/esp32/include/esp_sleep.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/gpio.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_types.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_assert.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_attr.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
+
+/home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/esp_intr.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
+
+/home/iho/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/hal.h:
+
+/home/iho/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/config/tie.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/corebits.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/config/system.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
+
+/home/iho/esp/esp-idf/components/log/include/esp_log.h:
+
+/home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
+
 /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h:
 
 /home/iho/esp/esp-idf/components/wear_levelling/private_include/WL_Flash.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/esp_err.h:
 
 /home/iho/esp/esp-idf/components/wear_levelling/private_include/Flash_Access.h:
 
@@ -112,7 +198,7 @@ WL_Flash.o: \
 
 /home/iho/esp/esp-idf/components/wear_levelling/private_include/WL_State.h:
 
-/home/iho/esp/esp-idf/components/wear_levelling/./crc32.h:
+/home/iho/esp/esp-idf/components/wear_levelling/crc32.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/string.h:
 

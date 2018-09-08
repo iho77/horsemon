@@ -1,4 +1,4 @@
-xtensa_init.o: /home/iho/esp/esp-idf/components/freertos/./xtensa_init.c \
+xtensa_init.o: /home/iho/esp/esp-idf/components/freertos/xtensa_init.c \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/xtensa_rtos.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/hal.h \
@@ -8,7 +8,6 @@ xtensa_init.o: /home/iho/esp/esp-idf/components/freertos/./xtensa_init.c \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/tie.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/system.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/simcall.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/iho/esp/hello_world/build/include/sdkconfig.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -57,8 +56,6 @@ xtensa_init.o: /home/iho/esp/esp-idf/components/freertos/./xtensa_init.c \
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/corebits.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/system.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/simcall.h:
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 

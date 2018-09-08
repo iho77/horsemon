@@ -1,5 +1,4 @@
-esp_ota_ops.o: \
- /home/iho/esp/esp-idf/components/app_update/./esp_ota_ops.c \
+esp_ota_ops.o: /home/iho/esp/esp-idf/components/app_update/esp_ota_ops.c \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -47,7 +46,6 @@ esp_ota_ops.o: \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -71,7 +69,9 @@ esp_ota_ops.o: \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -95,6 +95,7 @@ esp_ota_ops.o: \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_dport_access.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h
 
@@ -192,8 +193,6 @@ esp_ota_ops.o: \
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
 
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
-
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
@@ -240,7 +239,11 @@ esp_ota_ops.o: \
 
 /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -287,6 +290,8 @@ esp_ota_ops.o: \
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_dport_access.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
 
 /home/iho/esp/esp-idf/components/log/include/esp_log.h:
 

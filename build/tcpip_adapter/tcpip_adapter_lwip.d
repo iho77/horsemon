@@ -1,5 +1,5 @@
 tcpip_adapter_lwip.o: \
- /home/iho/esp/esp-idf/components/tcpip_adapter/./tcpip_adapter_lwip.c \
+ /home/iho/esp/esp-idf/components/tcpip_adapter/tcpip_adapter_lwip.c \
  /home/iho/esp/esp-idf/components/newlib/include/stdio.h \
  /home/iho/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/iho/esp/esp-idf/components/newlib/include/newlib.h \
@@ -34,18 +34,21 @@ tcpip_adapter_lwip.o: \
  /home/iho/esp/esp-idf/components/newlib/include/alloca.h \
  /home/iho/esp/esp-idf/components/newlib/include/assert.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_interface.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/opt.h \
+ /home/iho/esp/esp-idf/components/lwip/port/esp32/include/lwipopts.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/unistd.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/fcntl.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h \
  /home/iho/esp/esp-idf/components/vfs/include/sys/ioctl.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_task.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_system.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_sleep.h \
@@ -60,7 +63,9 @@ tcpip_adapter_lwip.o: \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -76,12 +81,13 @@ tcpip_adapter_lwip.o: \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/debug.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/arch.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h \
+ /home/iho/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
+ /home/iho/esp/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -90,7 +96,6 @@ tcpip_adapter_lwip.o: \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -107,39 +112,47 @@ tcpip_adapter_lwip.o: \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/vfs_lwip.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/def.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/tcpip.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/timers.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/netif.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/pbuf.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/stats.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/mem.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/memp.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_std.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_priv.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/dhcp.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/udp.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip4.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip6.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/nd6.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/priv/tcpip_priv.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/dns.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/port/netif/wlanif.h \
+ /home/iho/esp/esp-idf/components/lwip/port/esp32/include/arch/vfs_lwip.h \
+ /home/iho/esp/esp-idf/components/newlib/include/inttypes.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/def.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip4_addr.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip6_addr.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/def.h \
+ /home/iho/esp/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/inet.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/tcpip.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/err.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/timeouts.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/sys.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/netif.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/pbuf.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/stats.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/mem.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/memp.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/priv/memp_std.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/priv/memp_priv.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/dhcp.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/udp.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip4.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/prot/ip4.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip6.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/prot/ip6.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/prot/ip.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/prot/udp.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/nd6.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/priv/tcpip_priv.h \
+ /home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/dns.h \
+ /home/iho/esp/esp-idf/components/lwip/port/esp32/include/netif/wlanif.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_wifi.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_wifi_crypto_types.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_event.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_wifi_internal.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/port/netif/ethernetif.h \
- /home/iho/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver_options.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_wifi.h \
+ /home/iho/esp/esp-idf/components/lwip/port/esp32/include/netif/ethernetif.h \
+ /home/iho/esp/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver_options.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_event.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h
@@ -212,17 +225,21 @@ tcpip_adapter_lwip.o: \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_interface.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/opt.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h:
+/home/iho/esp/esp-idf/components/lwip/port/esp32/include/lwipopts.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/time.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/time.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/machine/time.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/unistd.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h:
 
@@ -235,6 +252,8 @@ tcpip_adapter_lwip.o: \
 /home/iho/esp/esp-idf/components/newlib/include/sys/stat.h:
 
 /home/iho/esp/esp-idf/components/vfs/include/sys/ioctl.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/sys/select.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_task.h:
 
@@ -264,7 +283,11 @@ tcpip_adapter_lwip.o: \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h:
 
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -296,17 +319,19 @@ tcpip_adapter_lwip.o: \
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/debug.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/arch.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h:
+/home/iho/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/errno.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/errno.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h:
+/home/iho/esp/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h:
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -323,8 +348,6 @@ tcpip_adapter_lwip.o: \
 /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
-
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
@@ -358,57 +381,69 @@ tcpip_adapter_lwip.o: \
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/port/arch/vfs_lwip.h:
+/home/iho/esp/esp-idf/components/lwip/port/esp32/include/arch/vfs_lwip.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/def.h:
+/home/iho/esp/esp-idf/components/newlib/include/inttypes.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/def.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip4_addr.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip6_addr.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/inet.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/def.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/tcpip.h:
+/home/iho/esp/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/err.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/inet.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/timers.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/tcpip.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/err.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/netif.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/timeouts.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/pbuf.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/sys.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/stats.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/netif.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/mem.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/pbuf.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/memp.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/stats.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_std.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/mem.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_priv.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/memp.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/dhcp.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/priv/memp_std.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/udp.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/priv/memp_priv.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/dhcp.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip4.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/udp.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/ip6.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/nd6.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip4.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/priv/tcpip_priv.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/prot/ip4.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/lwip/dns.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip6.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/port/netif/wlanif.h:
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/prot/ip6.h:
+
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/prot/ip.h:
+
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/prot/udp.h:
+
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/nd6.h:
+
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/priv/tcpip_priv.h:
+
+/home/iho/esp/esp-idf/components/lwip/lwip/src/include/lwip/dns.h:
+
+/home/iho/esp/esp-idf/components/lwip/port/esp32/include/netif/wlanif.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_wifi.h:
 
@@ -418,11 +453,15 @@ tcpip_adapter_lwip.o: \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_event.h:
 
+/home/iho/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/esp_wifi_internal.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/port/netif/ethernetif.h:
+/home/iho/esp/esp-idf/components/esp32/include/esp_wifi.h:
 
-/home/iho/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver_options.h:
+/home/iho/esp/esp-idf/components/lwip/port/esp32/include/netif/ethernetif.h:
+
+/home/iho/esp/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver_options.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_event.h:
 

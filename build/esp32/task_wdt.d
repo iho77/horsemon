@@ -1,4 +1,4 @@
-task_wdt.o: /home/iho/esp/esp-idf/components/esp32/./task_wdt.c \
+task_wdt.o: /home/iho/esp/esp-idf/components/esp32/task_wdt.c \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -47,7 +47,6 @@ task_wdt.o: /home/iho/esp/esp-idf/components/esp32/./task_wdt.c \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -71,7 +70,9 @@ task_wdt.o: /home/iho/esp/esp-idf/components/esp32/./task_wdt.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -93,7 +94,10 @@ task_wdt.o: /home/iho/esp/esp-idf/components/esp32/./task_wdt.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_dport_access.h \
- /home/iho/esp/esp-idf/components/esp32/include/esp_task_wdt.h
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_task_wdt.h \
+ /home/iho/esp/esp-idf/components/esp32/esp_system_internal.h
 
 /home/iho/esp/esp-idf/components/newlib/include/stdint.h:
 
@@ -191,8 +195,6 @@ task_wdt.o: /home/iho/esp/esp-idf/components/esp32/./task_wdt.c \
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
 
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
-
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
@@ -239,7 +241,11 @@ task_wdt.o: /home/iho/esp/esp-idf/components/esp32/./task_wdt.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -283,5 +289,11 @@ task_wdt.o: /home/iho/esp/esp-idf/components/esp32/./task_wdt.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_dport_access.h:
 
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/esp_task_wdt.h:
+
+/home/iho/esp/esp-idf/components/esp32/esp_system_internal.h:
 /home/iho/esp/esp-idf/components/esp32/./task_wdt.c:

@@ -1,5 +1,5 @@
 WL_Ext_Safe.o: \
- /home/iho/esp/esp-idf/components/wear_levelling/./WL_Ext_Safe.cpp \
+ /home/iho/esp/esp-idf/components/wear_levelling/WL_Ext_Safe.cpp \
  /home/iho/esp/esp-idf/components/wear_levelling/private_include/WL_Ext_Safe.h \
  /home/iho/esp/esp-idf/components/wear_levelling/private_include/WL_Flash.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_err.h \

@@ -1,5 +1,6 @@
 libsodium/src/libsodium/crypto_pwhash/argon2/pwhash_argon2i.o: \
  /home/iho/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/pwhash_argon2i.c \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/reent.h \
@@ -29,6 +30,8 @@ libsodium/src/libsodium/crypto_pwhash/argon2/pwhash_argon2i.o: \
  /home/iho/esp/esp-idf/components/newlib/include/machine/types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/sched.h \
  /home/iho/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/errno.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/errno.h:
 

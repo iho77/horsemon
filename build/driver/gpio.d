@@ -1,4 +1,4 @@
-gpio.o: /home/iho/esp/esp-idf/components/driver/./gpio.c \
+gpio.o: /home/iho/esp/esp-idf/components/driver/gpio.c \
  /home/iho/esp/esp-idf/components/esp32/include/esp_types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -50,7 +50,6 @@ gpio.o: /home/iho/esp/esp-idf/components/driver/./gpio.c \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -72,10 +71,14 @@ gpio.o: /home/iho/esp/esp-idf/components/driver/./gpio.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
+ /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/rtc_io.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_gpio_channel.h \
+ /home/iho/esp/esp-idf/components/soc/include/soc/rtc_periph.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h
 
@@ -181,8 +184,6 @@ gpio.o: /home/iho/esp/esp-idf/components/driver/./gpio.c \
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
 
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
-
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
@@ -225,6 +226,10 @@ gpio.o: /home/iho/esp/esp-idf/components/driver/./gpio.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
+/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
+
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
@@ -232,6 +237,10 @@ gpio.o: /home/iho/esp/esp-idf/components/driver/./gpio.c \
 /home/iho/esp/esp-idf/components/driver/include/driver/rtc_io.h:
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_gpio_channel.h:
+
+/home/iho/esp/esp-idf/components/soc/include/soc/rtc_periph.h:
+
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
 
 /home/iho/esp/esp-idf/components/log/include/esp_log.h:
 

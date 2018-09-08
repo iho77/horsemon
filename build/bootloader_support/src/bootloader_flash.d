@@ -1,6 +1,6 @@
 src/bootloader_flash.o: \
  /home/iho/esp/esp-idf/components/bootloader_support/src/bootloader_flash.c \
- /home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h \
+ /home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -39,7 +39,7 @@ src/bootloader_flash.o: \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/soc.h
 
-/home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h:
+/home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/stdint.h:
 

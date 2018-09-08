@@ -1,4 +1,4 @@
-eri.o: /home/iho/esp/esp-idf/components/xtensa-debug-module/./eri.c \
+eri.o: /home/iho/esp/esp-idf/components/xtensa-debug-module/eri.c \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/features.h \

@@ -1,5 +1,5 @@
 Partition.o: \
- /home/iho/esp/esp-idf/components/wear_levelling/./Partition.cpp \
+ /home/iho/esp/esp-idf/components/wear_levelling/Partition.cpp \
  /home/iho/esp/esp-idf/components/log/include/esp_log.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \

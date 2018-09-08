@@ -1,4 +1,4 @@
-rtc_module.o: /home/iho/esp/esp-idf/components/driver/./rtc_module.c \
+rtc_module.o: /home/iho/esp/esp-idf/components/driver/rtc_module.c \
  /home/iho/esp/esp-idf/components/esp32/include/esp_types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -36,6 +36,7 @@ rtc_module.o: /home/iho/esp/esp-idf/components/driver/./rtc_module.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_cntl_struct.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/syscon_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/syscon_struct.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/rtc_io.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_err.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdio.h \
@@ -50,8 +51,11 @@ rtc_module.o: /home/iho/esp/esp-idf/components/driver/./rtc_module.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_gpio_channel.h \
+ /home/iho/esp/esp-idf/components/soc/include/soc/rtc_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -77,7 +81,6 @@ rtc_module.o: /home/iho/esp/esp-idf/components/driver/./rtc_module.c \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -98,7 +101,7 @@ rtc_module.o: /home/iho/esp/esp-idf/components/driver/./rtc_module.c \
  /home/iho/esp/esp-idf/components/newlib/include/limits.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/list.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/rtc_cntl.h \
- /home/iho/esp/esp-idf/components/driver/./adc1_i2s_private.h \
+ /home/iho/esp/esp-idf/components/driver/adc1_i2s_private.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/queue.h
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_types.h:
@@ -175,6 +178,8 @@ rtc_module.o: /home/iho/esp/esp-idf/components/driver/./rtc_module.c \
 
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/syscon_struct.h:
 
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc.h:
+
 /home/iho/esp/esp-idf/components/driver/include/driver/rtc_io.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_err.h:
@@ -203,9 +208,15 @@ rtc_module.o: /home/iho/esp/esp-idf/components/driver/./rtc_module.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/esp_attr.h:
 
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
 
+/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
+
 /home/iho/esp/esp-idf/components/soc/esp32/include/soc/rtc_gpio_channel.h:
+
+/home/iho/esp/esp-idf/components/soc/include/soc/rtc_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 
@@ -257,8 +268,6 @@ rtc_module.o: /home/iho/esp/esp-idf/components/driver/./rtc_module.c \
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
 
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
-
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
@@ -299,7 +308,7 @@ rtc_module.o: /home/iho/esp/esp-idf/components/driver/./rtc_module.c \
 
 /home/iho/esp/esp-idf/components/driver/include/driver/rtc_cntl.h:
 
-/home/iho/esp/esp-idf/components/driver/./adc1_i2s_private.h:
+/home/iho/esp/esp-idf/components/driver/adc1_i2s_private.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/rom/queue.h:
 /home/iho/esp/esp-idf/components/driver/./rtc_module.c:

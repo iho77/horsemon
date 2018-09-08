@@ -43,7 +43,14 @@
 #include <lwip/netdb.h>
 
 
+#define USE_TASK_NOTIFICATIONS 1
+
 #define STORAGE_NAMESPACE "storage"
+#define SENDER_PORT_NUM 9999
+#define RECEIVER_PORT_NUM 9999
+#define RECEIVER_IP_ADDR "192.168.1.2"
+
+char my_ip[32];
 
 
 extern const uint8_t ulp_main_bin_start[] asm("_binary_ulp_main_bin_start");
@@ -56,6 +63,8 @@ static wl_handle_t s_wl_handle = WL_INVALID_HANDLE;
 
 static EventGroupHandle_t wifi_event_group;
 SemaphoreHandle_t ulp_isr_sem;
+
+static TaskHandle_t xTaskToNotify = NULL;
 
 // Mount path for the partition
 const char *base_path = "/spiflash";
@@ -90,11 +99,13 @@ esp_err_t restart_counter_op(opcode_t), data_op(opcode_t);
 
 
 static void start_ulp_program(), init_ulp_program(),start_ulp_program(), lorasend(),get_window(),send_window(),
-		    proceed_batch(),proceed_features(),initialise_wifi(), ulp_isr(void *),create_socket();
+		    proceed_batch(),proceed_features(),initialise_wifi(), ulp_isr(void *),udp_sender(void *pvParameters);
 
 void app_main()
 {
 	static const char *TAG = "main";
+	int result;
+	uint32_t txpos=0;
 
     esp_sleep_wakeup_cause_t cause = esp_sleep_get_wakeup_cause();
 
@@ -140,12 +151,7 @@ void app_main()
         switch (op_mode){
         	case RAW:
         		ESP_LOGI(TAG, "Entereing RAW mode loop");
-        		initialise_wifi();
-        		ESP_LOGI(TAG, "Waiting for AP connection...");
-        		xEventGroupWaitBits(wifi_event_group, IPV4_GOTIP_BIT, false, true, portMAX_DELAY);
-        		ESP_LOGI(TAG, "Connected to AP");
-        		create_socket();
-        		int result;
+        	    xTaskCreate(&udp_sender, "udp_sender", 4096, NULL, 5, &xTaskToNotify);
         		ulp_isr_sem = xSemaphoreCreateBinary();
         		assert(ulp_isr_sem);
         		esp_err_t err = rtc_isr_register(&ulp_isr, (void*) ulp_isr_sem, RTC_CNTL_SAR_INT_ST_M);
@@ -161,15 +167,17 @@ void app_main()
         				    	        restart_counter_op(READ);
         				    	        ESP_LOGI(TAG,"Restart counter :%d", restart_counter);
         				    	        get_window();  //collect data acquired by ULP
-        				    	        send_window();  // send to udp
+        				    	        if (xTaskToNotify!=NULL) {
+        				    	        	xTaskNotify(xTaskToNotify,txpos,eSetValueWithOverwrite);
+        				    	        }
         				    	        restart_counter_op(SAVE);  //inc restart counter
         				    	        start_ulp_program();
         				    	    } else {
         				    	        printf("ULP ISR timeout\n");
         				    	        esp_restart();
         				    	    };
-        		    };
-        		break;
+        		     };
+         		break;
         	case LoRa:
         		ESP_LOGI(TAG, "Going deep sleep");
         		fflush(stdout);
@@ -362,9 +370,7 @@ void get_window(){
 		}
 }
 
-void send_window(){
-	return;
-}
+
 
 void proceed_batch(){
 /*
@@ -391,6 +397,7 @@ esp_err_t event_handler(void *ctx, system_event_t *event)
 	    case SYSTEM_EVENT_STA_GOT_IP:
 	        xEventGroupSetBits(wifi_event_group, IPV4_GOTIP_BIT);
 	        ESP_LOGI(TAG,"WiFi got IP");
+	        sprintf(my_ip,IPSTR, IP2STR(&event->event_info.got_ip.ip_info.ip));
 	        break;
 	    case SYSTEM_EVENT_STA_DISCONNECTED:
 	        /* This is a workaround as ESP32 WiFi libs don't currently
@@ -425,33 +432,156 @@ static void initialise_wifi(void)
 }
 
 mode_t check_mode(){
-	return LoRa;
+	return RAW;
 }
 
-void create_socket(){
-	/*
-	static char tag[] = "Create socket";
-    ESP_LOGD(tag, "start");
-	socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+static void send_window(){
+ static const char *TAG = "send_window";
 
-		ESP_LOGD(tag, "socket: rc: %d", sock);
-		struct sockaddr_in serverAddress;
-		serverAddress.sin_family = AF_INET;
-		inet_pton(AF_INET, "192.168.1.200", &serverAddress.sin_addr.s_addr);
-		serverAddress.sin_port = htons(9999);
+ int socket_fd;
 
-		int rc = connect(sock, (struct sockaddr *)&serverAddress, sizeof(struct sockaddr_in));
-		ESP_LOGD(tag, "connect rc: %d", rc);
+ struct sockaddr_in sa,ra;
 
-		char *data = "Hello world";
-		rc = send(sock, data, strlen(data), 0);
-		ESP_LOGD(tag, "send: rc: %d", rc);
+ int sent_data;
 
-		rc = close(sock);
-		ESP_LOGD(tag, "close: rc: %d", rc);
-
-		vTaskDelete(NULL);
+ /* Creates an UDP socket (SOCK_DGRAM) with Internet Protocol Family (PF_INET).
+  * Protocol family and Address family related. For example PF_INET Protocol Family and AF_INET family are coupled.
  */
+ socket_fd = socket(PF_INET, SOCK_DGRAM, 0);
+
+ if ( socket_fd < 0 )
+ {
+
+     ESP_LOGI(TAG,"socket call failed");
+     return;
+
+ }
+
+ memset(&sa, 0, sizeof(struct sockaddr_in));
+
+ sa.sin_family = AF_INET;
+ sa.sin_addr.s_addr = inet_addr(my_ip);
+ sa.sin_port = htons(SENDER_PORT_NUM);
+
+
+ /* Bind the TCP socket to the port SENDER_PORT_NUM and to the current
+ * machines IP address (Its defined by SENDER_IP_ADDR).
+ * Once bind is successful for UDP sockets application can operate
+ * on the socket descriptor for sending or receiving data.
+ */
+ if (bind(socket_fd, (struct sockaddr *)&sa, sizeof(struct sockaddr_in)) == -1)
+ {
+   printf("Bind to Port Number %d ,IP address %s failed\n",SENDER_PORT_NUM,my_ip /*SENDER_IP_ADDR*/);
+   close(socket_fd);
+   return;
+ }
+ printf("Bind to Port Number %d ,IP address %s SUCCESS!!!\n",SENDER_PORT_NUM,my_ip);
+
+
+
+ memset(&ra, 0, sizeof(struct sockaddr_in));
+ ra.sin_family = AF_INET;
+ ra.sin_addr.s_addr = inet_addr(RECEIVER_IP_ADDR);
+ ra.sin_port = htons(RECEIVER_PORT_NUM);
+
+
+ for (int i=0;i<NO_OF_SAMPLES;i++) {
+     sent_data = sendto(socket_fd, window[i],sizeof(uint32_t)*3,0,(struct sockaddr*)&ra,sizeof(ra));
+     vTaskDelay(10 / portTICK_PERIOD_MS);
+     //printf("sending sample #:%d\n",i);
+	// sent_data = sendto(socket_fd, TAG,strlen(TAG),0,(struct sockaddr*)&ra,sizeof(ra));
+     if(sent_data < 0)
+     {
+        printf("send failed\n");
+
+     }
+
+ }
+ close(socket_fd);
+
 
 }
+
+static void udp_sender(void *pvParameters){
+
+	 static const char *TAG = "sender_thread";
+
+	 int socket_fd;
+
+	 unsigned long st;
+
+	 uint32_t ulNotifiedValue;
+
+
+	 struct sockaddr_in sa,ra;
+
+	 int sent_data;
+
+	 ESP_LOGI(TAG, "Waiting for AP connection...");
+     initialise_wifi();
+	 xEventGroupWaitBits(wifi_event_group, IPV4_GOTIP_BIT, false, true, portMAX_DELAY);
+	 ESP_LOGI(TAG, "Connected to AP");
+
+	 /* Creates an UDP socket (SOCK_DGRAM) with Internet Protocol Family (PF_INET).
+	  * Protocol family and Address family related. For example PF_INET Protocol Family and AF_INET family are coupled.
+	 */
+	 socket_fd = socket(PF_INET, SOCK_DGRAM, 0);
+
+	 if ( socket_fd < 0 )
+	 {
+
+	     ESP_LOGI(TAG,"socket call failed");
+	     return;
+
+	 }
+
+	 memset(&sa, 0, sizeof(struct sockaddr_in));
+
+	 sa.sin_family = AF_INET;
+	 sa.sin_addr.s_addr = inet_addr(my_ip);
+	 sa.sin_port = htons(SENDER_PORT_NUM);
+
+
+	 /* Bind the TCP socket to the port SENDER_PORT_NUM and to the current
+	 * machines IP address (Its defined by SENDER_IP_ADDR).
+	 * Once bind is successful for UDP sockets application can operate
+	 * on the socket descriptor for sending or receiving data.
+	 */
+	 if (bind(socket_fd, (struct sockaddr *)&sa, sizeof(struct sockaddr_in)) == -1)
+	 {
+	   printf("Bind to Port Number %d ,IP address %s failed\n",SENDER_PORT_NUM,my_ip /*SENDER_IP_ADDR*/);
+	   close(socket_fd);
+	   return;
+	 }
+	 printf("Bind to Port Number %d ,IP address %s SUCCESS!!!\n",SENDER_PORT_NUM,my_ip);
+
+
+
+	 memset(&ra, 0, sizeof(struct sockaddr_in));
+	 ra.sin_family = AF_INET;
+	 ra.sin_addr.s_addr = inet_addr(RECEIVER_IP_ADDR);
+	 ra.sin_port = htons(RECEIVER_PORT_NUM);
+
+     while(1){
+     printf("Start udp_sender loop\n");
+     st = xTaskGetTickCount();
+     xTaskNotifyWait(pdFALSE,ULONG_MAX,&ulNotifiedValue,portMAX_DELAY);
+     printf("Got notification from main loop\n");
+
+	 for (int i=0;i<NO_OF_SAMPLES;i++) {
+	     sent_data = sendto(socket_fd, window[i],sizeof(uint32_t)*3,0,(struct sockaddr*)&ra,sizeof(ra));
+	     vTaskDelay(20 / portTICK_PERIOD_MS);
+	     //printf("sending sample #:%d\n",i);
+		// sent_data = sendto(socket_fd, TAG,strlen(TAG),0,(struct sockaddr*)&ra,sizeof(ra));
+	     if(sent_data < 0)
+	     {
+	        printf("send failed\n");
+
+	     }
+
+	  }
+	 printf("UDP send proceed time:%lu\n",(xTaskGetTickCount()-st));
+     }
+ }
+
 

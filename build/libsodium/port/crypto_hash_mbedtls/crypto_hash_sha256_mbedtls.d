@@ -20,10 +20,10 @@ port/crypto_hash_mbedtls/crypto_hash_sha256_mbedtls.o: \
  /home/iho/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/iho/esp/esp-idf/components/newlib/include/alloca.h \
  /home/iho/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/sha256.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h \
  /home/iho/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
  /home/iho/esp/hello_world/build/include/sdkconfig.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  /home/iho/esp/esp-idf/components/newlib/include/limits.h \
  /home/iho/esp/esp-idf/components/newlib/include/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/string.h
@@ -68,13 +68,13 @@ port/crypto_hash_mbedtls/crypto_hash_sha256_mbedtls.o: \
 
 /home/iho/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/sha256.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h:
 
 /home/iho/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
 /home/iho/esp/hello_world/build/include/sdkconfig.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/limits.h:
 

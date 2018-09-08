@@ -19,6 +19,7 @@ libsodium/src/libsodium/sodium/utils.o: \
  /home/iho/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/iho/esp/esp-idf/components/newlib/include/alloca.h \
  /home/iho/esp/esp-idf/components/newlib/include/assert.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/limits.h \
@@ -32,6 +33,7 @@ libsodium/src/libsodium/sodium/utils.o: \
  /home/iho/esp/esp-idf/components/newlib/include/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/unistd.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h \
  /home/iho/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h \
  /home/iho/esp/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
@@ -75,6 +77,8 @@ libsodium/src/libsodium/sodium/utils.o: \
 
 /home/iho/esp/esp-idf/components/newlib/include/assert.h:
 
+/home/iho/esp/esp-idf/components/newlib/platform_include/errno.h:
+
 /home/iho/esp/esp-idf/components/newlib/include/errno.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h:
@@ -100,6 +104,8 @@ libsodium/src/libsodium/sodium/utils.o: \
 /home/iho/esp/esp-idf/components/newlib/include/sys/string.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/unistd.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/sys/unistd.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/unistd.h:
 

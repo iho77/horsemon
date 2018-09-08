@@ -1,4 +1,5 @@
-sdmmc_cmd.o: /home/iho/esp/esp-idf/components/sdmmc/./sdmmc_cmd.c \
+sdmmc_cmd.o: /home/iho/esp/esp-idf/components/sdmmc/sdmmc_cmd.c \
+ /home/iho/esp/esp-idf/components/sdmmc/sdmmc_common.h \
  /home/iho/esp/esp-idf/components/newlib/include/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/_ansi.h \
  /home/iho/esp/esp-idf/components/newlib/include/newlib.h \
@@ -45,7 +46,6 @@ sdmmc_cmd.o: /home/iho/esp/esp-idf/components/sdmmc/./sdmmc_cmd.c \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
  /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h \
- /home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h \
  /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
@@ -72,7 +72,9 @@ sdmmc_cmd.o: /home/iho/esp/esp-idf/components/sdmmc/./sdmmc_cmd.c \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h \
+ /home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ /home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h \
  /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h \
  /home/iho/esp/esp-idf/components/esp32/include/esp_intr.h \
  /home/iho/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -88,6 +90,8 @@ sdmmc_cmd.o: /home/iho/esp/esp-idf/components/sdmmc/./sdmmc_cmd.c \
  /home/iho/esp/esp-idf/components/newlib/include/sys/syslimits.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/endian.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/param.h
+
+/home/iho/esp/esp-idf/components/sdmmc/sdmmc_common.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/string.h:
 
@@ -181,8 +185,6 @@ sdmmc_cmd.o: /home/iho/esp/esp-idf/components/sdmmc/./sdmmc_cmd.c \
 
 /home/iho/esp/esp-idf/components/freertos/include/freertos/portmacro.h:
 
-/home/iho/esp/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
-
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h:
 
 /home/iho/esp/esp-idf/components/esp32/include/xtensa/config/specreg.h:
@@ -235,7 +237,11 @@ sdmmc_cmd.o: /home/iho/esp/esp-idf/components/sdmmc/./sdmmc_cmd.c \
 
 /home/iho/esp/esp-idf/components/esp32/include/rom/gpio.h:
 
+/home/iho/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h:
+
 /home/iho/esp/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+/home/iho/esp/esp-idf/components/soc/include/soc/gpio_periph.h:
 
 /home/iho/esp/esp-idf/components/driver/include/driver/touch_pad.h:
 

@@ -30,32 +30,33 @@ port/mbedtls_debug.o: \
  /home/iho/esp/esp-idf/components/newlib/include/alloca.h \
  /home/iho/esp/esp-idf/components/newlib/include/assert.h \
  /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h \
  /home/iho/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  /home/iho/esp/esp-idf/components/newlib/include/limits.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/platform_time.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdio.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/debug.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/bignum.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ecp.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ssl_ciphersuites.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/pk.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/md.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ecdsa.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/cipher.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crt.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/x509.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/asn1.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crl.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/dhm.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ecdh.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/debug.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ciphersuites.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/dhm.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdh.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h \
  /home/iho/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_debug.h
 
 /home/iho/esp/esp-idf/components/newlib/include/strings.h:
@@ -118,15 +119,17 @@ port/mbedtls_debug.o: \
 
 /home/iho/esp/esp-idf/components/log/include/esp_log_internal.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/platform.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h:
 
 /home/iho/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/limits.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/platform_time.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/time.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/time.h:
 
@@ -136,39 +139,39 @@ port/mbedtls_debug.o: \
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/debug.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/debug.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/bignum.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ecp.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ssl_ciphersuites.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl_ciphersuites.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/pk.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pk.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/md.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/rsa.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/rsa.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ecdsa.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdsa.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/cipher.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/cipher.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crt.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crt.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/x509.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/asn1.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/asn1.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/x509_crl.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/x509_crl.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/dhm.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/dhm.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ecdh.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecdh.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/ssl.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ssl.h:
 
 /home/iho/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_debug.h:
 /home/iho/esp/esp-idf/components/mbedtls/port/mbedtls_debug.c:

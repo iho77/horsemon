@@ -19,8 +19,10 @@ argtable3/argtable3.o: \
  /home/iho/esp/esp-idf/components/newlib/include/machine/types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/sched.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/time.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/time.h \
+ /home/iho/esp/esp-idf/components/newlib/platform_include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/errno.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdlib.h \
@@ -71,9 +73,13 @@ argtable3/argtable3.o: \
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
+/home/iho/esp/esp-idf/components/newlib/platform_include/time.h:
+
 /home/iho/esp/esp-idf/components/newlib/include/time.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/machine/time.h:
+
+/home/iho/esp/esp-idf/components/newlib/platform_include/errno.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/errno.h:
 

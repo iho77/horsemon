@@ -1,6 +1,6 @@
 src/bootloader_sha.o: \
  /home/iho/esp/esp-idf/components/bootloader_support/src/bootloader_sha.c \
- /home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_sha.h \
+ /home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_sha.h \
  /home/iho/esp/esp-idf/components/newlib/include/stdint.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -19,21 +19,27 @@ src/bootloader_sha.o: \
  /home/iho/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/iho/esp/esp-idf/components/newlib/include/alloca.h \
- /home/iho/esp/esp-idf/components/newlib/include/string.h \
- /home/iho/esp/esp-idf/components/newlib/include/sys/string.h \
+ /home/iho/esp/esp-idf/components/esp32/include/esp_err.h \
+ /home/iho/esp/esp-idf/components/newlib/include/stdio.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/types.h \
+ /home/iho/esp/esp-idf/components/newlib/include/machine/types.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/sched.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /home/iho/esp/esp-idf/components/newlib/platform_include/assert.h \
  /home/iho/esp/hello_world/build/include/sdkconfig.h \
  /home/iho/esp/esp-idf/components/newlib/include/assert.h \
+ /home/iho/esp/esp-idf/components/newlib/include/string.h \
+ /home/iho/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/param.h \
  /home/iho/esp/esp-idf/components/newlib/include/sys/syslimits.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/endian.h \
  /home/iho/esp/esp-idf/components/newlib/include/machine/param.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/sha256.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h \
  /home/iho/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
+ /home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  /home/iho/esp/esp-idf/components/newlib/include/limits.h
 
-/home/iho/esp/esp-idf/components/bootloader_support/include_priv/bootloader_sha.h:
+/home/iho/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_sha.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/stdint.h:
 
@@ -71,15 +77,27 @@ src/bootloader_sha.o: \
 
 /home/iho/esp/esp-idf/components/newlib/include/alloca.h:
 
-/home/iho/esp/esp-idf/components/newlib/include/string.h:
+/home/iho/esp/esp-idf/components/esp32/include/esp_err.h:
 
-/home/iho/esp/esp-idf/components/newlib/include/sys/string.h:
+/home/iho/esp/esp-idf/components/newlib/include/stdio.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/types.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/machine/types.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/sched.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 /home/iho/esp/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/iho/esp/hello_world/build/include/sdkconfig.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/assert.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/string.h:
+
+/home/iho/esp/esp-idf/components/newlib/include/sys/string.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/sys/param.h:
 
@@ -89,11 +107,11 @@ src/bootloader_sha.o: \
 
 /home/iho/esp/esp-idf/components/newlib/include/machine/param.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/sha256.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h:
 
 /home/iho/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-/home/iho/esp/esp-idf/components/mbedtls/include/mbedtls/check_config.h:
+/home/iho/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
 /home/iho/esp/esp-idf/components/newlib/include/limits.h:
 /home/iho/esp/esp-idf/components/bootloader_support/src/bootloader_sha.c:
