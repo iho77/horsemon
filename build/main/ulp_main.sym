@@ -1,8 +1,0 @@
-channel_0_measurements B 000000c8 
-channel_1_measurements B 000008c8 
-channel_2_measurements B 000010c8 
-entry T 00000000 
-sample_counter B 000000b8 
-tmp_ch_0 B 000000bc 
-tmp_ch_1 B 000000c0 
-tmp_ch_2 B 000000c4 
