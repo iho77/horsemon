@@ -98,8 +98,8 @@ op_mode_t op_mode = LoRa, check_mode();
 esp_err_t restart_counter_op(opcode_t), data_op(opcode_t);
 
 
-static void start_ulp_program(), init_ulp_program(),start_ulp_program(), lorasend(),get_window(),send_window(),
-		    proceed_batch(),proceed_features(),initialise_wifi(), ulp_isr(void *),udp_sender(void *pvParameters);
+static void start_ulp_program(), init_ulp_program(),start_ulp_program(), lorasend(),get_window(),
+		proceed_features(),initialise_wifi(), ulp_isr(void *),udp_sender(void *pvParameters);
 
 void app_main()
 {
@@ -371,21 +371,6 @@ void get_window(){
 }
 
 
-
-void proceed_batch(){
-/*
-	for (int i=0;i<NO_OF_SAMPLES*NUM_OF_WINDOWS;i++){
-		window[0][i] = batch[i][0];
-		data[1][i] = batch[i][1];
-		data[2][i] = batch[i][2];
-		//data[3][i] = (float)sqrt(pow(data[0][i],2)+pow(data[1][i],2)+pow(data[2][i],2));
-		//data[4][i] = 0.0; //roll
-		//data[5][i] = 0.0; //pitch
-		//data[6][i] = 0.0; //yow
-	//	printf("%d;%d;%d;\n",data[0][i],data[1][i],data[2][i]);*/
-
-}
-
 esp_err_t event_handler(void *ctx, system_event_t *event)
 {    static const char *TAG = "WiFi event handler";
 
@@ -433,73 +418,6 @@ static void initialise_wifi(void)
 
 mode_t check_mode(){
 	return RAW;
-}
-
-static void send_window(){
- static const char *TAG = "send_window";
-
- int socket_fd;
-
- struct sockaddr_in sa,ra;
-
- int sent_data;
-
- /* Creates an UDP socket (SOCK_DGRAM) with Internet Protocol Family (PF_INET).
-  * Protocol family and Address family related. For example PF_INET Protocol Family and AF_INET family are coupled.
- */
- socket_fd = socket(PF_INET, SOCK_DGRAM, 0);
-
- if ( socket_fd < 0 )
- {
-
-     ESP_LOGI(TAG,"socket call failed");
-     return;
-
- }
-
- memset(&sa, 0, sizeof(struct sockaddr_in));
-
- sa.sin_family = AF_INET;
- sa.sin_addr.s_addr = inet_addr(my_ip);
- sa.sin_port = htons(SENDER_PORT_NUM);
-
-
- /* Bind the TCP socket to the port SENDER_PORT_NUM and to the current
- * machines IP address (Its defined by SENDER_IP_ADDR).
- * Once bind is successful for UDP sockets application can operate
- * on the socket descriptor for sending or receiving data.
- */
- if (bind(socket_fd, (struct sockaddr *)&sa, sizeof(struct sockaddr_in)) == -1)
- {
-   printf("Bind to Port Number %d ,IP address %s failed\n",SENDER_PORT_NUM,my_ip /*SENDER_IP_ADDR*/);
-   close(socket_fd);
-   return;
- }
- printf("Bind to Port Number %d ,IP address %s SUCCESS!!!\n",SENDER_PORT_NUM,my_ip);
-
-
-
- memset(&ra, 0, sizeof(struct sockaddr_in));
- ra.sin_family = AF_INET;
- ra.sin_addr.s_addr = inet_addr(RECEIVER_IP_ADDR);
- ra.sin_port = htons(RECEIVER_PORT_NUM);
-
-
- for (int i=0;i<NO_OF_SAMPLES;i++) {
-     sent_data = sendto(socket_fd, window[i],sizeof(uint32_t)*3,0,(struct sockaddr*)&ra,sizeof(ra));
-     vTaskDelay(10 / portTICK_PERIOD_MS);
-     //printf("sending sample #:%d\n",i);
-	// sent_data = sendto(socket_fd, TAG,strlen(TAG),0,(struct sockaddr*)&ra,sizeof(ra));
-     if(sent_data < 0)
-     {
-        printf("send failed\n");
-
-     }
-
- }
- close(socket_fd);
-
-
 }
 
 static void udp_sender(void *pvParameters){
