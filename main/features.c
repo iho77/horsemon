@@ -10,11 +10,11 @@
 #include "config.h"
 
 
-float avg_x,avg_y,avg_z, max_x, max_y, max_z, sma;
+float avg_x,avg_y,avg_z, max_x, max_y, max_z, sma, wl;
 
 uint8_t features_init(int32_t ds[BATCH_SIZE][3]){
 
-	uint32_t sum_x = 0, sum_y = 0, sum_z = 0;
+	uint32_t sum_x = 0, sum_y = 0, sum_z = 0, wl_x = 0, wl_y = 0, wl_z = 0;
 
 	max_x = 0.0;
 	max_y = 0.0;
@@ -24,6 +24,11 @@ uint8_t features_init(int32_t ds[BATCH_SIZE][3]){
      sum_x += abs(ds[i][2]);
      sum_y += abs(ds[i][1]);
      sum_z += abs(ds[i][0]);
+     if (i < BATCH_SIZE-1) {
+	     wl_x += abs(ds[i+1][0]-ds[i][0]);
+	     wl_y += abs(ds[i+1][1]-ds[i][1]);
+	     wl_z += abs(ds[i+1][2]-ds[i][2]);
+     }
 
     if (abs(ds[i][2]) > max_x ) max_x = abs(ds[i][2]);
     if (abs(ds[i][1]) > max_y ) max_y = abs(ds[i][1]);
@@ -36,6 +41,7 @@ uint8_t features_init(int32_t ds[BATCH_SIZE][3]){
 	avg_z = (float)(sum_z / (BATCH_SIZE));
 
 	sma = (float)((sum_x+sum_y+sum_z) / (BATCH_SIZE));
+	wl = (float)((wl_x+wl_y+wl_z) / (BATCH_SIZE));
 
 	return FEATURES_NUM;
 
